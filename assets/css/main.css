@@ -1,0 +1,45 @@
+body {
+  font: 18px/1.333333333333333 "futura-pt", sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.section-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.svg-logo-icon {
+  width: 100px;
+  fill: #be985b;
+}
+.headline,
+.subhead {
+  display: inline-block;
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+}
+.headline {
+  padding: 5px 0.375em;
+  background-color: #006959;
+  font-size: 3.555555555555555em;
+}
+.headline__segment {
+  display: inline-block;
+  margin-right: 0.375em;
+}
+.subhead {
+  padding: 5px 0.833333333333333em;
+  background-color: #56b39a;
+  font-size: 2em;
+}
+.subhead__segment {
+  display: inline-block;
+  margin-right: 0.833333333333333em;
+}
