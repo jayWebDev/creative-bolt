@@ -1,19 +1,37 @@
+.section--hero
+  position: relative
+  width: 100%
+  height: 658px
+  padding-top: 125px
+  background: url(../images/faded_lines-01@2x.jpg) center -385px / 960px no-repeat
+  z-index: -1
+
+.hero__content
+  position: relative
+  max-width: 960px
+  height: 100%
+  margin: 0 auto
+
 .headline, .subhead
+  position: relative
   display: inline-block
   margin: 0
   color: white
   text-transform: uppercase
+  z-index: 1
 
 .headline
-  padding: 5px (24/64)em
+  margin: 275px 90px 6px
+  padding: 3px (24/64)em
   background-color: main-color
   emify 64
 
   &__segment
     display: inline-block
     margin-right: (24/64)em
-    
+
 .subhead
+  margin-left: 300px
   padding: 5px (30/36)em
   background-color: main-lighter
   emify 36
@@ -21,3 +39,16 @@
   &__segment
     display: inline-block
     margin-right: (30/36)em
+
+.hero__logo-wrapper
+  position: absolute
+  width: 261px;
+  height: 535px;
+  left: 50%
+  margin-left: -130.5px
+  z-index: 0
+
+.js-logo--hero
+  width: 100%
+  height: 100%
+  fill: secondary-color

@@ -11,22 +11,39 @@ ul {
   list-style-type: none;
 }
 .section-container {
+  width: 960px;
   max-width: 960px;
   margin: 0 auto;
 }
-.svg-logo-icon {
-  width: 100px;
-  fill: #be985b;
+.page__navigation {
+  position: fixed;
+}
+.section--hero {
+  position: relative;
+  width: 100%;
+  height: 658px;
+  padding-top: 125px;
+  background: url("../images/faded_lines-01@2x.jpg") center -385px/960px no-repeat;
+  z-index: -1;
+}
+.hero__content {
+  position: relative;
+  max-width: 960px;
+  height: 100%;
+  margin: 0 auto;
 }
 .headline,
 .subhead {
+  position: relative;
   display: inline-block;
   margin: 0;
   color: #fff;
   text-transform: uppercase;
+  z-index: 1;
 }
 .headline {
-  padding: 5px 0.375em;
+  margin: 275px 90px 6px;
+  padding: 3px 0.375em;
   background-color: #006959;
   font-size: 3.555555555555555em;
 }
@@ -35,6 +52,7 @@ ul {
   margin-right: 0.375em;
 }
 .subhead {
+  margin-left: 300px;
   padding: 5px 0.833333333333333em;
   background-color: #56b39a;
   font-size: 2em;
@@ -42,4 +60,17 @@ ul {
 .subhead__segment {
   display: inline-block;
   margin-right: 0.833333333333333em;
+}
+.hero__logo-wrapper {
+  position: absolute;
+  width: 261px;
+  height: 535px;
+  left: 50%;
+  margin-left: -130.5px;
+  z-index: 0;
+}
+.js-logo--hero {
+  width: 100%;
+  height: 100%;
+  fill: #be985b;
 }
