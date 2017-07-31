@@ -1,10 +1,11 @@
 - var sections = ['About Me','Knowledge','Projects','Resume','Contact'];
 
-nav.page__navigation
-  .section-container
-    .logo-temp
+nav.main-nav
+  .main-nav__container
+    .main-nav__logo-wrapper
+      include ../../assets/images/js-logo-hero.min.svg
 
-    ul
+    ul.main-nav__list
       each section in sections
-        li
+        li.main-nav__item
           a= section

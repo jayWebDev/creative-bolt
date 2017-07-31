@@ -1,5 +1,7 @@
 body {
-  font: 18px/1.333333333333333 "futura-pt", sans-serif;
+  font-size: 18px;
+  line-height: 1.333333333333333;
+  font-family: "futura-pt", sans-serif;
 }
 body {
   margin: 0;
@@ -10,13 +12,36 @@ ul {
   padding: 0;
   list-style-type: none;
 }
-.section-container {
-  width: 960px;
-  max-width: 960px;
+.main-nav {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(255,255,255,0.8);
+  border-bottom: 1px solid #be985b;
+  font-weight: 800;
+}
+.main-nav__container {
+  display: flex;
   margin: 0 auto;
 }
-.page__navigation {
-  position: fixed;
+.main-nav__logo-wrapper {
+  position: relative;
+  top: 15px;
+  width: 43px;
+  height: 88.08px;
+  margin: 0 20px 0 15px;
+}
+.main-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  flex: 1;
+  padding: 12px 0;
+  color: #006959;
+}
+.main-nav__item {
+  display: flex;
+  align-items: center;
+  flex-basis: 33.3333%;
 }
 .section--hero {
   position: relative;
