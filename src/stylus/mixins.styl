@@ -1,2 +1,12 @@
 emify(size)
-  font-size (size/font-size) em
+  font-size: (size/font-size)em
+
+mq-min(breakpoint)
+  @media screen and (min-width: breakpoint)
+    {block}
+
+clearfix()
+  &:after
+    content: ''
+    display: table
+    clear: both

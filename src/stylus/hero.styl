@@ -2,7 +2,6 @@
   position: relative
   width: 100%
   height: 658px
-  padding-top: 125px
   background: url(../images/faded_lines-01@2x.jpg) center -385px / 960px no-repeat
   z-index: -1
 
@@ -12,7 +11,36 @@
   height: 100%
   margin: 0 auto
 
-.headline, .subhead
+.hero__logo-wrapper
+  position: absolute
+  width: 218.54px
+  height: 447.64px
+  top: 136px
+  left: 134px
+  z-index: 0
+
+  +mq-min(376px)
+    width: 261px;
+    height: 535px;
+    top: 121px
+    left: 50%
+    margin-left: -130.5px
+
+.js-logo--hero
+  width: 100%
+  height: 100%
+  fill: secondary-color
+
+.headline-wrapper
+  position: relative
+  padding-top: 163px
+  z-index: 1
+  clearfix()
+
+  +mq-min(376px)
+    padding-top: 402px
+
+.hero__headline, .hero__subhead
   position: relative
   display: inline-block
   margin: 0
@@ -20,35 +48,45 @@
   text-transform: uppercase
   z-index: 1
 
-.headline
-  margin: 275px 90px 6px
-  padding: 3px (24/64)em
+.hero__headline
+  display: inline
+  emify 48
+
+  +mq-min(376px)
+    float: left
+    margin: 0 90px 6px
+    padding-left: (24/64)em
+    background-color: main-color
+    emify 64
+
+.hero__subhead
+  display: inline
+  emify 24
+
+  +mq-min(376px)
+    display: inline
+    float: right
+    margin-right: 70px
+    padding-left: (30/36)em
+    background-color: main-lighter
+    emify 36
+
+.headline__segment, .subhead__segment
+  float: left
+  clear: left
+  margin: 0 0 3px 30px
+
+  +mq-min(376px)
+    float: none
+    margin-left: 0
+    background-color: none
+
+.headline__segment
+  display: inline-block
+  padding: 0 (24/64)em 0 0
   background-color: main-color
-  emify 64
 
-  &__segment
-    display: inline-block
-    margin-right: (24/64)em
-
-.subhead
-  margin-left: 300px
-  padding: 5px (30/36)em
+.subhead__segment
+  display: inline-block
+  padding: 0 (30/36)em 0 0
   background-color: main-lighter
-  emify 36
-
-  &__segment
-    display: inline-block
-    margin-right: (30/36)em
-
-.hero__logo-wrapper
-  position: absolute
-  width: 261px;
-  height: 535px;
-  left: 50%
-  margin-left: -130.5px
-  z-index: 0
-
-.js-logo--hero
-  width: 100%
-  height: 100%
-  fill: secondary-color

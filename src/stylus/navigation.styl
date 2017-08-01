@@ -16,15 +16,35 @@
   height: 88.08px
   margin: 0 20px 0 15px
 
+  +mq-min(376px)
+    top: 10px
+    width: 34.17px
+    height: 70px
+    margin: 0 45px 0 50px
+
 .main-nav__list
   display: flex
+  flex-direction: row
   flex-wrap: wrap
   align-items: stretch
   flex: 1
   padding: 12px 0
   color: main-color
 
+  +mq-min(376px)
+    padding: 0
+
 .main-nav__item
   display: flex
   align-items: center
   flex-basis: 33.3333%
+
+  +mq-min(376px)
+    flex: none
+    padding-right: (34/font-size)em
+
+  &:last-of-type
+    color: secondary-color
+
+    +mq-min(376px)
+      margin-left: auto
