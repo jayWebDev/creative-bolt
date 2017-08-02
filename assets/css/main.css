@@ -11,15 +11,34 @@ ul {
   list-style-type: none;
 }
 .main-nav {
-  position: fixed;
+  position: relative;
   width: 100%;
-  background-color: rgba(255,255,255,0.8);
-  border-bottom: 1px solid #be985b;
-  font-weight: 800;
+  margin: 0 auto;
+  background: #ffc0cb;
+}
+@media screen and (min-width: 1100px) {
+  .main-nav {
+    max-width: 960px;
+  }
 }
 .main-nav__container {
+  position: fixed;
   display: flex;
+  width: 100%;
   margin: 0 auto;
+  background-color: rgba(255,255,255,0.8);
+  border-bottom: 1px solid #be985b;
+}
+@media screen and (min-width: 1100px) {
+  .main-nav__container {
+    flex-direction: column;
+    align-items: start;
+    display: inline-block;
+    width: auto;
+    margin-left: -50px;
+    border-right: 1px solid #be985b;
+    border-bottom: none;
+  }
 }
 .main-nav__logo-wrapper {
   position: relative;
@@ -36,6 +55,13 @@ ul {
     margin: 0 45px 0 50px;
   }
 }
+@media screen and (min-width: 1100px) {
+  .main-nav__logo-wrapper {
+    width: 25.87px;
+    height: 53px;
+    margin: 10px 0 20px 15px;
+  }
+}
 .main-nav__list {
   display: flex;
   flex-direction: row;
@@ -48,6 +74,12 @@ ul {
 @media screen and (min-width: 376px) {
   .main-nav__list {
     padding: 0;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .main-nav__list {
+    flex-direction: column;
+    align-items: start;
   }
 }
 .main-nav__item {
@@ -64,9 +96,14 @@ ul {
 .main-nav__item:last-of-type {
   color: #be985b;
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 620px) {
   .main-nav__item:last-of-type {
     margin-left: auto;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .main-nav__item:last-of-type {
+    margin-left: 0;
   }
 }
 .section--hero {
@@ -87,10 +124,15 @@ ul {
   width: 218.54px;
   height: 447.64px;
   top: 136px;
-  left: 134px;
+  right: 20px;
   z-index: 0;
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 400px) {
+  .hero__logo-wrapper {
+    right: 70px;
+  }
+}
+@media screen and (min-width: 500px) {
   .hero__logo-wrapper {
     width: 261px;
     height: 535px;
@@ -108,13 +150,14 @@ ul {
   position: relative;
   padding-top: 163px;
   z-index: 1;
+  text-align: center;
 }
 .headline-wrapper:after {
   content: '';
   display: table;
   clear: both;
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 500px) {
   .headline-wrapper {
     padding-top: 402px;
   }
@@ -124,7 +167,9 @@ ul {
   position: relative;
   display: inline-block;
   margin: 0;
+  padding: 0;
   color: #fff;
+  line-height: 1;
   text-transform: uppercase;
   z-index: 1;
 }
@@ -132,12 +177,18 @@ ul {
   display: inline;
   font-size: 2.666666666666667em;
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 500px) {
+  .hero__headline {
+    display: inline-block;
+    margin: 0 0 6px 0;
+    padding-top: 3px;
+    background-color: #006959;
+  }
+}
+@media screen and (min-width: 820px) {
   .hero__headline {
     float: left;
     margin: 0 90px 6px;
-    padding-left: 0.375em;
-    background-color: #006959;
     font-size: 3.555555555555555em;
   }
 }
@@ -145,13 +196,18 @@ ul {
   display: inline;
   font-size: 1.333333333333333em;
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 500px) {
   .hero__subhead {
-    display: inline;
-    float: right;
-    margin-right: 70px;
-    padding-left: 0.833333333333333em;
+    display: inline-block;
+    margin-left: 0;
+    padding-top: 3px;
     background-color: #56b39a;
+  }
+}
+@media screen and (min-width: 820px) {
+  .hero__subhead {
+    margin-right: 70px;
+    float: right;
     font-size: 2em;
   }
 }
@@ -161,7 +217,13 @@ ul {
   clear: left;
   margin: 0 0 3px 30px;
 }
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 400px) {
+  .headline__segment,
+  .subhead__segment {
+    margin-left: 70px;
+  }
+}
+@media screen and (min-width: 500px) {
   .headline__segment,
   .subhead__segment {
     float: none;
@@ -171,11 +233,11 @@ ul {
 }
 .headline__segment {
   display: inline-block;
-  padding: 0 0.375em 0 0;
+  padding: 0 0.234375em;
   background-color: #006959;
 }
 .subhead__segment {
   display: inline-block;
-  padding: 0 0.833333333333333em 0 0;
+  padding: 0 0.416666666666667em;
   background-color: #56b39a;
 }

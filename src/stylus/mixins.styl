@@ -1,8 +1,12 @@
-emify(size)
-  font-size: (size/font-size)em
+emify(size, base = font-size)
+  (size/base)em
 
 mq-min(breakpoint)
   @media screen and (min-width: breakpoint)
+    {block}
+
+mq-between(breakpoint1, breakpoint2)
+  @media screen and (min-width: breakpoint1) and (max-width: breakpoint2)
     {block}
 
 clearfix()

@@ -16,10 +16,13 @@
   width: 218.54px
   height: 447.64px
   top: 136px
-  left: 134px
+  right: 20px
   z-index: 0
 
-  +mq-min(376px)
+  +mq-min(400px)
+    right: 70px
+
+  +mq-min(500px)
     width: 261px;
     height: 535px;
     top: 121px
@@ -35,58 +38,71 @@
   position: relative
   padding-top: 163px
   z-index: 1
+  text-align: center
   clearfix()
 
-  +mq-min(376px)
+  +mq-min(500px)
     padding-top: 402px
 
 .hero__headline, .hero__subhead
   position: relative
   display: inline-block
   margin: 0
+  padding: 0
   color: white
+  line-height: 1
   text-transform: uppercase
   z-index: 1
 
 .hero__headline
   display: inline
-  emify 48
+  font-size: emify(48)
 
-  +mq-min(376px)
+  +mq-min(500px)
+    display: inline-block
+    margin: 0 0 6px 0
+    padding-top: 3px
+    background-color: main-color
+
+  +mq-min(820px)
     float: left
     margin: 0 90px 6px
-    padding-left: (24/64)em
-    background-color: main-color
-    emify 64
+    font-size: emify(64)
 
 .hero__subhead
   display: inline
-  emify 24
+  font-size: emify(24)
 
-  +mq-min(376px)
-    display: inline
-    float: right
-    margin-right: 70px
-    padding-left: (30/36)em
+  +mq-min(500px)
+    display: inline-block
+    margin-left: 0
+    padding-top: 3px
     background-color: main-lighter
-    emify 36
+
+  +mq-min(820px)
+    margin-right: 70px
+    float: right
+    font-size: emify(36)
 
 .headline__segment, .subhead__segment
   float: left
   clear: left
   margin: 0 0 3px 30px
 
-  +mq-min(376px)
+  +mq-min(400px)
+    margin-left: 70px
+
+  +mq-min(500px)
     float: none
     margin-left: 0
     background-color: none
 
 .headline__segment
   display: inline-block
-  padding: 0 (24/64)em 0 0
+  padding: 0 (15/64)em
   background-color: main-color
 
 .subhead__segment
   display: inline-block
-  padding: 0 (30/36)em 0 0
+  padding: 0 (15/36)em
   background-color: main-lighter
