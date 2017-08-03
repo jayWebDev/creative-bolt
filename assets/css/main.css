@@ -253,6 +253,7 @@ ul {
 .section--hello {
   position: relative;
   width: 100%;
+  z-index: 0;
 }
 .section--hello:after {
   content: '';
