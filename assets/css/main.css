@@ -23,6 +23,7 @@ ul {
   width: 100%;
   margin: 0 auto;
   background: #ffc0cb;
+  z-index: 1;
 }
 @media screen and (min-width: 1100px) {
   .main-nav {
