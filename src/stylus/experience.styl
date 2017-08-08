@@ -1,0 +1,68 @@
+.section--experience
+  position: relative
+  background-color: main-lighter
+  padding: 40px
+
+.experience__content
+  display: flex
+  flex-direction: column
+  justify-content: center
+  text-align: center
+  clearfix()
+
+  +mq-min(600px)
+    flex-direction: row
+
+.experience__block
+  display: inline-block
+
+  &:first-of-type
+    padding-bottom: 30px
+    border-bottom: 1px solid white
+
+    +mq-min(600px)
+      padding: 0 80px 0 0
+      border-right: 1px solid white
+      border-bottom: none
+
+  &:last-of-type
+    padding-top: 30px
+
+    +mq-min(600px)
+      padding: 0 0 0 80px
+
+  +mq-min(600px)
+    padding: 90px 0
+
+.experience__title,
+.experience__years,
+.experience__label
+  margin: 0
+  padding: 0
+  line-height: 1
+  color: white
+  text-align: center
+  text-transform: uppercase
+
+.experience__title
+  font-size: emify(24)
+  letter-spacing: 1px
+
+  +mq-between(600px, 770px)
+      font-size: emify(18)
+
+.experience__years
+  font-size: emify(200)
+  font-weight: 700
+  letter-spacing: -7px
+
+  +mq-between(600px, 770px)
+    font-size: emify(140)
+
+.experience__label
+  ont-size: emify(24)
+  letter-spacing: 5px
+
+  +mq-between(600px, 770px)
+    font-size: emify(18)
+    letter-spacing: 0
