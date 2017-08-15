@@ -45,16 +45,18 @@
   text-transform: uppercase
 
 .experience__title
-  font-size: emify(24)
   letter-spacing: 1px
 
   +mq-between(600px, 770px)
       font-size: emify(18)
 
 .experience__years
-  font-size: emify(200)
+  font-size: emify(150)
   font-weight: 700
   letter-spacing: -7px
+
+  +mq-min(375px)
+    font-size: emify(200)
 
   +mq-between(600px, 770px)
     font-size: emify(140)

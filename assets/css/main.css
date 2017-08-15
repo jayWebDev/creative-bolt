@@ -8,6 +8,9 @@ body {
   line-height: 1.333333333333333;
   font-family: "futura-pt", sans-serif;
 }
+h3 {
+  font-size: 1.333333333333333em;
+}
 ul {
   margin: 0;
   padding: 0;
@@ -406,7 +409,6 @@ ul {
   text-transform: uppercase;
 }
 .experience__title {
-  font-size: 1.333333333333333em;
   letter-spacing: 1px;
 }
 @media screen and (min-width: 600px) and (max-width: 770px) {
@@ -415,9 +417,14 @@ ul {
   }
 }
 .experience__years {
-  font-size: 11.11111111111111em;
+  font-size: 8.333333333333334em;
   font-weight: 700;
   letter-spacing: -7px;
+}
+@media screen and (min-width: 375px) {
+  .experience__years {
+    font-size: 11.11111111111111em;
+  }
 }
 @media screen and (min-width: 600px) and (max-width: 770px) {
   .experience__years {
@@ -433,4 +440,102 @@ ul {
     font-size: 1em;
     letter-spacing: 0;
   }
+}
+.section--expertise {
+  position: relative;
+  overflow: hidden;
+}
+.section--expertise:before,
+.section--expertise:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 200%;
+  max-width: 960px;
+  height: 960px;
+  background: url("../images/faded_lines-02@2x.jpg") center/100% no-repeat;
+  z-index: -1;
+}
+@media screen and (min-width: 450px) {
+  .section--expertise:before,
+  .section--expertise:after {
+    width: 100%;
+  }
+}
+.section--expertise:before {
+  top: -400px;
+}
+@media screen and (min-width: 450px) {
+  .section--expertise:before {
+    top: -300px;
+    right: -400px;
+    transform: rotate(-90deg);
+  }
+}
+.section--expertise:after {
+  bottom: -400px;
+}
+@media screen and (min-width: 450px) {
+  .section--expertise:after {
+    bottom: -400px;
+    left: -400px;
+    transform: rotate(98deg);
+  }
+}
+.expertise__section {
+  position: relative;
+  padding: 40px 20px;
+  border-bottom: 1px solid #be985b;
+}
+@media screen and (min-width: 450px) {
+  .expertise__section {
+    margin: 0 80px;
+    padding: 67px 0;
+  }
+}
+@media screen and (min-width: 450px) {
+  .expertise__section:nth-child(2n) .expertise__text,
+  .expertise__section:nth-child(2n-1) .expertise__graphic {
+    float: left;
+  }
+}
+@media screen and (min-width: 450px) {
+  .expertise__section:nth-child(2n) .expertise__graphic,
+  .expertise__section:nth-child(2n-1) .expertise__text {
+    float: right;
+  }
+}
+.expertise__section:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+@media screen and (min-width: 450px) {
+  .expertise__text,
+  .expertise__graphic {
+    width: 46.25%;
+  }
+}
+@media screen and (min-width: 450px) {
+  .expertise__graphic {
+    float: right;
+  }
+}
+@media screen and (min-width: 450px) {
+  .expertise__text {
+    float: left;
+  }
+}
+.expertise-graphic {
+  width: 100%;
+}
+.expertise__title {
+  color: #006959;
+}
+.expertise__title::after {
+  content: '';
+  display: block;
+  width: 3.333333333333333em;
+  margin: 30px 0;
+  border-bottom: 10px solid #be985b;
 }
