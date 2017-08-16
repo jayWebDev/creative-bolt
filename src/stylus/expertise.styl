@@ -1,0 +1,80 @@
+.section--expertise
+  position: relative
+  overflow: hidden
+
+  &:before,
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    width: 200%
+    max-width: 960px
+    height: 960px
+    background: url(../images/faded_lines-02@2x.jpg) center / 100% no-repeat
+    z-index: -1
+
+    +mq-min(450px)
+      width: 100%
+
+  &:before
+    top: -400px
+
+    +mq-min(450px)
+      top: -300px
+      right: -400px
+      transform: rotate(-90deg)
+
+  &:after
+    bottom: -400px
+
+    +mq-min(450px)
+      bottom: -400px
+      left: -400px
+      transform: rotate(98deg)
+
+.expertise__section
+  position: relative
+  padding: 40px 20px
+  border-bottom: 1px solid secondary-color
+
+  +mq-min(450px)
+    margin: 0 80px
+    padding: 67px 0
+
+  &:nth-child(2n) .expertise__text,
+  &:nth-child(2n-1) .expertise__graphic
+    +mq-min(450px)
+      float: left
+
+  &:nth-child(2n) .expertise__graphic,
+  &:nth-child(2n-1) .expertise__text
+    +mq-min(450px)
+      float: right
+
+  clearfix()
+
+.expertise__text,
+.expertise__graphic
+  +mq-min(450px)
+    width: (370/800) * 100%
+
+.expertise__graphic
+  +mq-min(450px)
+    float: right
+
+.expertise__text
+  +mq-min(450px)
+    float: left
+
+.expertise-graphic
+  width: 100%
+
+.expertise__title
+  color: main-color
+
+  &::after
+    content: ''
+    display: block
+    width: emify(80, 24)
+    margin: 30px 0
+    border-bottom: 10px solid secondary-color
