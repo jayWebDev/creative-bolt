@@ -34,7 +34,7 @@
   height: 100%
   fill: secondary-color
 
-.headline-wrapper
+.section-headline__wrapper--hero
   position: relative
   padding-top: 163px
   z-index: 1
@@ -51,12 +51,9 @@
   padding: 0
   color: white
   line-height: 1
-  text-transform: uppercase
   z-index: 1
 
 .hero__headline
-  display: inline
-  font-size: emify(48)
 
   +mq-min(500px)
     display: inline-block
@@ -67,11 +64,11 @@
   +mq-min(820px)
     float: left
     margin: 0 90px 6px
-    font-size: emify(64)
 
 .hero__subhead
   display: inline
   font-size: emify(24)
+  text-transform: uppercase
 
   +mq-min(500px)
     display: inline-block

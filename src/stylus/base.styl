@@ -9,6 +9,16 @@ body
   line-height: line-height
   font-family: font-family
 
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 0
+  text-transform: uppercase
+
+h1, h2
+  font-size: emify(48)
+
+  +mq-min(820px)
+    font-size: emify(64)
 h3
   font-size: emify(24)
 
@@ -21,3 +31,14 @@ ul
   width: 100%
   max-width: 960px
   margin: 0 auto
+
+.section-headline
+  display: inline-block
+  padding: 0 20px
+  color: white
+
+.section-headline__wrapper
+  position: relative
+  margin: 70px auto
+  text-align: center
+  z-index: 1

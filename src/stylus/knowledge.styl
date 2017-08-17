@@ -1,5 +1,106 @@
 .section--knowledge
-  background-color: main-color;
+  background-color: main-color
+
+.knowledge__content
+  margin: 0 10px
+  padding: 100px 0
+
+  +mq-min(450px)
+    margin: 0 95px
+
+.knowledge__icons
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+
+  +mq-min(450px)
+    flex-direction: column
+
+.knowledge__icon-row
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  width: 100%
+
+  +mq-min(450px)
+    display: table
+    display: flex
+    flex-direction: row
+
+  &:first-of-type
+    +mq-min(450px)
+      border-bottom: 1px solid secondary-color
+      padding-bottom: 55px
+
+  &:last-of-type
+    +mq-min(450px)
+      padding-top: 55px
 
 .knowledge__icon
+  display: flex
+  justify-content: center
+
+  +mq-min(450px)
+    display: table-cell
+    vertical-align: middle
+    text-align: center
+
+.icon--knowledge
+  width: 100%
   max-width: 100px
+  fill: white
+
+.knowledge__lists
+  clearfix()
+
+.knowledge__list-container,
+.knowledge__list-container--double
+  position: relative
+  float: left
+  margin-right: (30/770) * 100%
+  z-index: 0
+
+  &:last-of-type
+    margin-right: 0
+    margin-left: (80/770) * 100%
+
+  &::before,
+  &::after
+    content: ''
+    display: inline-block
+    position: absolute
+    z-index: -1
+
+    +mq-min(450px)
+      top: -102px
+      height: 61px
+
+    +mq-min(820px)
+      top: -111px
+      height: 70px
+
+  &::before
+    left: 22.5px
+    width: 1px
+    background-color: secondary-color
+
+  &::after
+    left: 0
+    width: 45px
+    border-bottom: 10px solid secondary-color
+
+.knowledge__list-container
+  width: (130/770) * 100%
+
+.knowledge__list-container--double
+  width: (370/770) * 100%
+
+.knowledge__list-title
+  margin-bottom: 10px
+
+.knowledge__list
+  float: left
+  color: white
+
+  &:nth-child(2n+1)
+    margin-left: 50px

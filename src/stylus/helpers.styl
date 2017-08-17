@@ -1,0 +1,30 @@
+.bg-color--main
+  background-color: main-color
+
+.bg-color--secondary
+  background-color: secondary-color
+
+.deco-centerline--main,
+.deco-centerline--secondary
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    top: 50%
+    width: 100%
+    height: 1px
+    z-index: -1
+
+.deco-centerline--main
+  &::after
+    background-color: main-color
+
+.deco-centerline--secondary
+  &::after
+    background-color: secondary-color
+
+.text--white
+  color: white
+
+.text--secondary
+  color: secondary-color
