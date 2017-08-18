@@ -672,13 +672,26 @@ ul {
   max-width: 100px;
   fill: #fff;
 }
+.knowledge__lists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 .knowledge__lists:after {
   content: '';
   display: table;
   clear: both;
 }
+@media screen and (min-width: 700px) {
+  .knowledge__lists {
+    flex-wrap: nowrap;
+  }
+}
 .knowledge__list-container,
 .knowledge__list-container--double {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   position: relative;
   margin-bottom: 50px;
   overflow: auto;
@@ -752,6 +765,7 @@ ul {
 }
 @media screen and (min-width: 700px) {
   .knowledge__list-container--double {
+    flex: 1 1 100%;
     float: left;
     width: 48.05194805194805%;
   }
@@ -760,6 +774,7 @@ ul {
   width: 50%;
 }
 .knowledge__list-title {
+  flex: 1 1 100%;
   margin-bottom: 10px;
   text-align: center;
 }
