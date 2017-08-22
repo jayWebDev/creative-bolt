@@ -1,0 +1,113 @@
+.section--projects
+  position: relative
+  overflow: hidden
+
+  &:before,
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    width: 200%
+    max-width: 960px
+    height: 960px
+    background: url(../images/faded_lines-01@2x.jpg) center / 100% no-repeat
+    z-index: -1
+
+    +mq-min(960px)
+      width: 100%
+
+  &:before
+    top: -420px
+    left: -100px
+    transform: rotate(-160deg)
+
+    +mq-min(450px)
+      top: -460px
+      left: 0
+
+  &:after
+    bottom: -730px
+    left: -140px
+    transform: rotate(270deg)
+
+.projects__content
+  padding-bottom: 100px
+
+.project__container
+  margin-bottom: 50px
+  padding: 0 30px 50px 30px
+  border-bottom: 1px solid secondary-color
+
+  +mq-min(960px)
+    padding: 0 15px 0 15px
+    border-bottom: none
+
+  &:last-of-type
+    border-bottom: none
+    padding-bottom: 0
+
+.project__title
+  position: relative
+  width: 100%
+  margin: 0 auto 30px auto
+  padding-bottom: 25px
+  line-height: 1.1
+
+  +mq-min(960px)
+    margin: 0 auto 65px auto
+
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    bottom: 0
+    left: 0
+    width: (145/960) * 100%
+    height: 10px
+    background-color: secondary-color
+
+.project__hero
+  display: block
+  width: 100%
+  max-width: 960px
+  margin: 0 auto 30px auto
+  border: 1px solid secondary-color
+
+  +mq-min(960px)
+    margin: 0 auto 50px auto
+
+.project__info
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: flex-start
+  flex-wrap: wrap
+
+  +mq-min(960px)
+    margin: 0 65px 0 15px
+
+.project__description
+  order: 1
+  width: 100%
+  margin-bottom: 25px
+
+  +mq-min(960px)
+    width: (530/960) * 100%
+
+.project__categories
+  flex: none
+  order: 2
+  width: 130px
+  font-size: emify(12px)
+  font-weight: 700
+  color: secondary-color
+  text-transform: uppercase
+
+  +mq-min(960px)
+    order: 1
+    text-align: right
+
+.project__button
+  order: 1
+  padding: 10px 15px
+  border-bottom: 4px solid main-lighter
