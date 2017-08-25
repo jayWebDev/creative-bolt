@@ -51,7 +51,7 @@ ul {
 }
 .section-headline__wrapper {
   position: relative;
-  margin: 70px auto;
+  margin: 0 auto 70px auto;
   text-align: center;
   z-index: 1;
 }
@@ -846,7 +846,7 @@ ul {
   transform: rotate(270deg);
 }
 .projects__content {
-  padding-bottom: 100px;
+  padding: 70px 0;
 }
 .project__container {
   margin-bottom: 50px;
@@ -938,6 +938,7 @@ ul {
   order: 1;
   padding: 10px 15px;
   border-bottom: 4px solid #56b39a;
+  letter-spacing: 0.1em;
 }
 .section--resume {
   background-image: repeating-linear-gradient(45deg, #b78c48, #b78c48 2px, transparent 0, transparent 15px);
@@ -946,7 +947,18 @@ ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   padding: 70px 80px;
+  line-height: 1;
+  text-align: center;
+}
+.resume__headline {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 680px) {
+  .resume__headline {
+    margin-bottom: 0;
+  }
 }
 .resume__icon {
   display: inline-block;
@@ -954,4 +966,89 @@ ul {
 }
 .icon--download {
   fill: #fff;
+}
+.section--contact {
+  position: relative;
+  overflow: hidden;
+}
+.section--contact:before,
+.section--contact:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 250%;
+  max-width: 960px;
+  height: 960px;
+  background: url("../images/faded_lines-01@2x.jpg") center/100% no-repeat;
+  z-index: -1;
+}
+@media screen and (min-width: 450px) {
+  .section--contact:before,
+  .section--contact:after {
+    width: 100%;
+  }
+}
+.section--contact:before {
+  top: -350px;
+  left: -270px;
+  transform: rotate(-110deg);
+}
+@media screen and (min-width: 450px) {
+  .section--contact:before {
+    top: -340px;
+  }
+}
+.section--contact:after {
+  top: 590px;
+  right: -110px;
+  transform: rotate(-77deg);
+}
+@media screen and (min-width: 450px) {
+  .section--contact:after {
+    top: 690px;
+  }
+}
+.contact__content {
+  padding: 70px 30px;
+}
+@media screen and (min-width: 960px) {
+  .contact__content {
+    padding: 100px 175px;
+  }
+}
+.form__input-wrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+.form__input-label {
+  display: inline-block;
+  width: 100%;
+  font-weight: 700;
+  color: #be985b;
+  text-transform: uppercase;
+  transform: translate(30px, 40px);
+}
+.form__input--text,
+.form__input--textarea {
+  width: 100%;
+  border: 1px solid #be985b;
+  border-bottom: 5px solid #92703a;
+}
+.form__input--text {
+  height: 60px;
+}
+.form__input--textarea {
+  height: 200px;
+}
+.form__button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  border: none;
+  border-bottom: 5px solid #92703a;
+  font-family: "futura-pt", sans-serif;
+  font-weight: 300;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }

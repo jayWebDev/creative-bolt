@@ -1,0 +1,27 @@
+section.section--contact
+  .section-container
+    .contact__content
+    
+      .section-headline__wrapper
+        h2.section-headline.bg-color--main Contact Me
+        
+      form.contact__form
+        
+        .form__input-wrapper
+          label(for="name").form__input-label Name
+          input(type="text", id="name", name="contact_name").form__input--text
+            
+        .form__input-wrapper
+          label(for="email").form__input-label Email
+          input(type="text", id="email", name="contact_email").form__input--text
+          
+        .form__input-wrapper
+          label(for="subject").form__input-label Subject
+          input(type="text", id="subject", name="contact_subject").form__input--text
+            
+        .form__input-wrapper
+          label(for="message").form__input-label Message
+          textarea(type="text", id="message", name="contact_message").form__input--textarea
+        
+        .form__input-wrapper  
+          input(type="submit", value="Send Message").form__button.bg-color--main.text--white

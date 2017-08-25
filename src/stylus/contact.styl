@@ -1,0 +1,75 @@
+.section--contact
+  position: relative
+  overflow: hidden
+
+  &:before,
+  &:after
+    content: ''
+    display: block
+    position: absolute
+    width: 250%
+    max-width: 960px
+    height: 960px
+    background: url(../images/faded_lines-01@2x.jpg) center / 100% no-repeat
+    z-index: -1
+
+    +mq-min(450px)
+      width: 100%
+
+  &:before
+    top: -350px
+    left: -270px
+    transform: rotate(-110deg)
+
+    +mq-min(450px)
+      top: -340px
+
+  &:after
+    top: 590px
+    right: -110px
+    transform: rotate(-77deg)
+
+    +mq-min(450px)
+      top: 690px
+
+.contact__content
+  padding: 70px 30px
+
+  +mq-min(960px)
+    padding: 100px 175px
+
+.form__input-wrapper
+  position: relative
+  margin-bottom: 30px
+
+.form__input-label
+  display: inline-block
+  width: 100%
+  font-weight: 700
+  color: secondary-color
+  text-transform: uppercase
+  transform: translate(30px, 40px)
+
+.form__input--text
+.form__input--textarea
+  width: 100%
+  border: 1px solid secondary-color
+  border-bottom: 5px solid lightness(secondary-color, 40%)
+
+.form__input--text
+  height: 60px
+
+.form__input--textarea
+  height: 200px
+
+.form__button
+  display: block
+  margin: 0 auto
+  padding: 10px 20px
+  border: none
+  border-bottom: 5px solid lightness(secondary-color, 40%)
+  font-family: font-family
+  font-weight: 300
+  font-size: emify(18px)
+  text-transform: uppercase
+  letter-spacing: .1em
