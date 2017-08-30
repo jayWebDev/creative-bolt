@@ -1,0 +1,51 @@
+.section--footer
+  background-color: main-color
+
+.footer__content
+  padding: 60px 15px 30px
+  text-align: center
+
+.footer__icon,
+.footer__logo
+  display: inline-block
+  width: 100%
+
+.footer__icon
+  max-width: 30px
+  margin: 0 20px 50px
+  padding-bottom: 20px
+  border-bottom: 10px solid secondary-color
+  fill: secondary-color
+
+  +mq-min(400px)
+    max-width: 50px
+
+  +mq-min(600px)
+    max-width: 50px
+    margin: 0 30px 50px
+
+.footer__logo
+  max-width: 50px
+  fill: white
+
+.footer__text
+  margin-bottom: 20px
+  font-weight: 400
+  color: white
+  text-transform: uppercase
+  letter-spacing: .1em
+
+.footer-text--strong
+  font-weight: 700
+
+.footer-text--resp-block
+  display: block
+
+  +mq-min(600px)
+    display: inline
+
+.footer-text--resp-hide
+    display: none
+
+    +mq-min(600px)
+      display: inline
