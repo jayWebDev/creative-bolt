@@ -1,14 +1,16 @@
 header.section--hero
   .section-container
     .hero__content
-      .hero__logo-wrapper
-        include ../../assets/images/js-logo-hero.min.svg
+      
+      .hero__lockup--home
+        .hero__logo-wrapper.logo-wrapper--home
+          include ../../assets/images/js-logo-hero.min.svg
 
-      .section-headline__wrapper--hero
-        h1.section-headline.hero__headline
-          span.headline__segment Jason
-          span.headline__segment Shoreman
-        p.hero__subhead
-          span.subhead__segment Designer.
-          span.subhead__segment Developer.
-          span.subhead__segment Creator.
+        .section-headline__wrapper--hero
+          h1.hero__headline--home
+            span.headline__segment.bg-color--main Jason
+            span.headline__segment.bg-color--main Shoreman
+          p.hero__subhead--home
+            span.subhead__segment.bg-color--main-lighter Designer.
+            span.subhead__segment.bg-color--main-lighter Developer.
+            span.subhead__segment.bg-color--main-lighter Creator.

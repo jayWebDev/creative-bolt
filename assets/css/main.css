@@ -20,7 +20,19 @@ h6 {
 }
 h1,
 h2 {
-  font-size: 2.666666666666667em;
+  font-size: 1.666666666666667em;
+}
+@media screen and (min-width: 400px) {
+  h1,
+  h2 {
+    font-size: 2em;
+  }
+}
+@media screen and (min-width: 620px) {
+  h1,
+  h2 {
+    font-size: 2.666666666666667em;
+  }
 }
 @media screen and (min-width: 820px) {
   h1,
@@ -61,8 +73,17 @@ ul {
 .bg-color--main {
   background-color: #006959;
 }
+.bg-color--main-lighter {
+  background-color: #56b39a;
+}
 .bg-color--secondary {
   background-color: #be985b;
+}
+.bg-color--wedding-primary {
+  background-color: #6b1e6b;
+}
+.bg-color--wedding-lighter {
+  background-color: #a864a8;
 }
 .headline--left {
   margin: 0 auto 70px;
@@ -214,85 +235,146 @@ ul {
   z-index: -1;
 }
 .hero__content {
-  position: relative;
   max-width: 960px;
   height: 100%;
   margin: 0 auto;
+}
+.hero__lockup--home,
+.hero__lockup--wedding {
+  position: relative;
+}
+.hero__lockup--home {
+  padding-top: 138px;
+}
+@media screen and (min-width: 620px) {
+  .hero__lockup--home {
+    margin: 0 9.895833333333332% 0 0;
+  }
+}
+.hero__lockup--wedding {
+  margin: 0 20px;
+  padding-top: 130px;
+}
+@media screen and (min-width: 500px) {
+  .hero__lockup--wedding {
+    margin: 0 10.416666666666668%;
+  }
+}
+@media screen and (min-width: 620px) {
+  .hero__lockup--wedding {
+    margin: 0 15.104166666666666%;
+  }
 }
 .hero__logo-wrapper {
   position: absolute;
   width: 218.54px;
   height: 447.64px;
-  top: 136px;
-  right: 20px;
   z-index: 0;
 }
-@media screen and (min-width: 400px) {
-  .hero__logo-wrapper {
-    right: 70px;
-  }
-}
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 620px) {
   .hero__logo-wrapper {
     width: 261px;
     height: 535px;
-    top: 121px;
-    left: 50%;
-    margin-left: -130.5px;
   }
+}
+.logo-wrapper--home {
+  right: 226px;
+}
+.logo-wrapper--home .js-logo--hero {
+  fill: #be985b;
+}
+.logo-wrapper--wedding {
+  right: 10px;
+}
+@media screen and (min-width: 400px) {
+  .logo-wrapper--wedding {
+    left: 150px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .logo-wrapper--wedding {
+    left: 187px;
+  }
+}
+@media screen and (min-width: 820px) {
+  .logo-wrapper--wedding {
+    left: 356px;
+  }
+}
+.logo-wrapper--wedding .js-logo--hero {
+  fill: #0072bc;
 }
 .js-logo--hero {
   width: 100%;
   height: 100%;
-  fill: #be985b;
 }
 .section-headline__wrapper--hero {
   position: relative;
-  padding-top: 163px;
   z-index: 1;
-  text-align: center;
 }
 .section-headline__wrapper--hero:after {
   content: '';
   display: table;
   clear: both;
 }
-@media screen and (min-width: 500px) {
-  .section-headline__wrapper--hero {
-    padding-top: 402px;
-  }
-}
-.hero__headline,
-.hero__subhead {
+.hero__headline--home,
+.hero__headline--wedding,
+.hero__subhead--home,
+.hero__subhead--wedding {
   position: relative;
-  display: inline-block;
   margin: 0;
   padding: 0;
   color: #fff;
   line-height: 1;
   z-index: 1;
 }
+.hero__headline--home,
+.hero__headline--wedding {
+  margin-bottom: 0.277777777777778em;
+  clear: both;
+}
+.hero__headline--home {
+  float: left;
+  margin-top: 274px;
+}
 @media screen and (min-width: 500px) {
-  .hero__headline {
-    display: inline-block;
-    margin: 0 0 6px 0;
+  .hero__headline--home {
+    margin-bottom: 6px;
     padding-top: 3px;
     background-color: #006959;
   }
 }
-@media screen and (min-width: 820px) {
-  .hero__headline {
-    float: left;
-    margin: 0 90px 6px;
-  }
+.hero__headline--wedding {
+  margin-top: 100px;
 }
-.hero__subhead {
-  display: inline;
-  font-size: 1.333333333333333em;
+.hero__subhead--home,
+.hero__subhead--wedding {
+  font-size: 1em;
   text-transform: uppercase;
 }
+@media screen and (min-width: 400px) {
+  .hero__subhead--home,
+  .hero__subhead--wedding {
+    font-size: 1.333333333333333em;
+  }
+}
 @media screen and (min-width: 500px) {
-  .hero__subhead {
+  .hero__subhead--home,
+  .hero__subhead--wedding {
+    font-size: 1.666666666666667em;
+  }
+}
+@media screen and (min-width: 820px) {
+  .hero__subhead--home,
+  .hero__subhead--wedding {
+    font-size: 2em;
+  }
+}
+.hero__subhead--home {
+  display: inline;
+}
+@media screen and (min-width: 500px) {
+  .hero__subhead--home {
     display: inline-block;
     margin-left: 0;
     padding-top: 3px;
@@ -300,41 +382,25 @@ ul {
   }
 }
 @media screen and (min-width: 820px) {
-  .hero__subhead {
+  .hero__subhead--home {
     margin-right: 70px;
     float: right;
-    font-size: 2em;
-  }
-}
-.headline__segment,
-.subhead__segment {
-  float: left;
-  clear: left;
-  margin: 0 0 3px 30px;
-}
-@media screen and (min-width: 400px) {
-  .headline__segment,
-  .subhead__segment {
-    margin-left: 70px;
   }
 }
 @media screen and (min-width: 500px) {
   .headline__segment,
   .subhead__segment {
-    float: none;
-    margin-left: 0;
     background-color: none;
   }
 }
 .headline__segment {
   display: inline-block;
-  padding: 0 0.234375em;
-  background-color: #006959;
+  margin-bottom: 3px;
+  padding: 0.1875em 0.34375em;
 }
 .subhead__segment {
   display: inline-block;
-  padding: 0 0.416666666666667em;
-  background-color: #56b39a;
+  padding: 0.333333333333333em 0.611111111111111em;
 }
 .section--hello {
   position: relative;
