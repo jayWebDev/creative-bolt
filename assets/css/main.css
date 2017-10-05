@@ -231,8 +231,19 @@ ul {
   position: relative;
   width: 100%;
   height: 658px;
-  background: url("../images/faded_lines-01@2x.jpg") center -385px/960px no-repeat;
+  height: 100vh;
   z-index: -1;
+}
+.hero--home {
+  background: url("../images/faded_lines-01@2x.jpg") center -385px/960px no-repeat;
+}
+.hero--wedding {
+  background: url("../images/project-images/faded_lines-wedding-purple@2x.png") 60% -237px/960px no-repeat;
+}
+@media screen and (min-width: 960px) {
+  .hero--wedding {
+    background-position: -20% -237px;
+  }
 }
 .hero__content {
   max-width: 960px;
@@ -244,11 +255,12 @@ ul {
   position: relative;
 }
 .hero__lockup--home {
+  margin: 0 20px;
   padding-top: 138px;
 }
-@media screen and (min-width: 620px) {
+@media screen and (min-width: 500px) {
   .hero__lockup--home {
-    margin: 0 9.895833333333332% 0 0;
+    margin: 0 9.895833333333332%;
   }
 }
 .hero__lockup--wedding {
@@ -278,7 +290,18 @@ ul {
   }
 }
 .logo-wrapper--home {
-  right: 226px;
+  right: 50px;
+}
+@media screen and (min-width: 500) {
+  .logo-wrapper--home {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media screen and (min-width: 820px) {
+  .logo-wrapper--home {
+    left: 356px;
+  }
 }
 .logo-wrapper--home .js-logo--hero {
   fill: #be985b;
@@ -334,14 +357,20 @@ ul {
   clear: both;
 }
 .hero__headline--home {
-  float: left;
-  margin-top: 274px;
+  margin-top: 150px;
+  padding-right: 50%;
 }
 @media screen and (min-width: 500px) {
   .hero__headline--home {
+    margin-top: 230px;
     margin-bottom: 6px;
     padding-top: 3px;
-    background-color: #006959;
+    padding-right: 0;
+  }
+}
+@media screen and (min-width: 620px) {
+  .hero__headline--home {
+    margin-top: 274px;
   }
 }
 .hero__headline--wedding {
@@ -355,10 +384,10 @@ ul {
 @media screen and (min-width: 400px) {
   .hero__subhead--home,
   .hero__subhead--wedding {
-    font-size: 1.333333333333333em;
+    font-size: 1.222222222222222em;
   }
 }
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 620px) {
   .hero__subhead--home,
   .hero__subhead--wedding {
     font-size: 1.666666666666667em;
@@ -371,20 +400,15 @@ ul {
   }
 }
 .hero__subhead--home {
-  display: inline;
+  padding-right: 80%;
 }
 @media screen and (min-width: 500px) {
   .hero__subhead--home {
     display: inline-block;
+    float: right;
     margin-left: 0;
     padding-top: 3px;
-    background-color: #56b39a;
-  }
-}
-@media screen and (min-width: 820px) {
-  .hero__subhead--home {
-    margin-right: 70px;
-    float: right;
+    padding-right: 0;
   }
 }
 @media screen and (min-width: 500px) {
@@ -396,11 +420,20 @@ ul {
 .headline__segment {
   display: inline-block;
   margin-bottom: 3px;
+  margin-right: -0.34375em;
   padding: 0.1875em 0.34375em;
+}
+.headline__segment:last-of-type {
+  margin-right: 0;
 }
 .subhead__segment {
   display: inline-block;
+  margin-bottom: 3px;
+  margin-right: -0.611111111111111em;
   padding: 0.333333333333333em 0.611111111111111em;
+}
+.subhead__segment:last-of-type {
+  margin-right: 0;
 }
 .section--hello {
   position: relative;
@@ -433,7 +466,7 @@ ul {
 }
 .hello__content {
   position: relative;
-  padding: 50px 0 390px;
+  padding: 180px 0 390px;
 }
 .hello__content:after {
   content: '';

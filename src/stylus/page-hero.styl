@@ -2,8 +2,17 @@
   position: relative
   width: 100%
   height: 658px
-  background: url(../images/faded_lines-01@2x.jpg) center -385px / 960px no-repeat
+  height: 100vh
   z-index: -1
+
+.hero--home
+  background: url(../images/faded_lines-01@2x.jpg) center -385px / 960px no-repeat
+
+.hero--wedding
+  background: url(../images/project-images/faded_lines-wedding-purple@2x.png) 60% -237px / 960px no-repeat
+
+  +mq-min(960px)
+    background-position: -20% -237px
 
 .hero__content
   max-width: 960px
@@ -15,10 +24,11 @@
   position: relative
 
 .hero__lockup--home
+  margin: 0 20px
   padding-top: 138px
 
-  +mq-min(620px)
-    margin: 0 (95/960) * 100% 0 0
+  +mq-min(500px)
+    margin: 0 (95/960) * 100%
 
 .hero__lockup--wedding
   margin: 0 20px
@@ -41,7 +51,14 @@
     height: 535px;
 
 .logo-wrapper--home
-  right: 226px
+  right: 50px
+
+  +mq-min(500)
+    left: 50%
+    transform: translateX(-50%)
+
+  +mq-min(820px)
+    left: 356px
 
   .js-logo--hero
     fill: secondary-color
@@ -87,13 +104,17 @@
   clear: both
 
 .hero__headline--home
-  float: left
-  margin-top: 274px
+  margin-top: 150px
+  padding-right: 50%
 
   +mq-min(500px)
+    margin-top: 230px
     margin-bottom: 6px
     padding-top: 3px
-    background-color: main-color
+    padding-right: 0
+
+  +mq-min(620px)
+    margin-top: 274px
 
 .hero__headline--wedding
   margin-top: 100px
@@ -104,26 +125,23 @@
   text-transform: uppercase
 
   +mq-min(400px)
-    font-size: emify(24)
+    font-size: emify(22)
 
-  +mq-min(500px)
+  +mq-min(620px)
     font-size: emify(30)
 
   +mq-min(820px)
     font-size: emify(36)
 
 .hero__subhead--home
-  display: inline
+  padding-right: 80%
 
   +mq-min(500px)
     display: inline-block
+    float: right
     margin-left: 0
     padding-top: 3px
-    background-color: main-lighter
-
-  +mq-min(820px)
-    margin-right: 70px
-    float: right
+    padding-right: 0
 
 .headline__segment, .subhead__segment
 
@@ -133,8 +151,17 @@
 .headline__segment
   display: inline-block
   margin-bottom: 3px
+  margin-right: -(22/64)em
   padding: (12/64)em (22/64)em
+
+  &:last-of-type
+    margin-right: 0
 
 .subhead__segment
   display: inline-block
+  margin-bottom: 3px
+  margin-right: -(22/36)em
   padding: (12/36)em (22/36)em
+
+  &:last-of-type
+    margin-right: 0
