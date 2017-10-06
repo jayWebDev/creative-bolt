@@ -1,0 +1,42 @@
+.project-page__section-description
+  margin-bottom: 90px
+
+.project-figure,
+.project-figure--full-width
+  display: block
+  position: relative
+  margin-bottom: 90px
+
+.project-figure--full-width
+  max-width: 960px
+
+.project-figure
+  &--wedding-1
+    &::before,
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      width: 100%
+      max-width: 960px
+      height: 100%
+      left: 50%
+      background-size: contain
+      transform: translateX(-50%)
+      z-index: -1
+
+    &::before
+      top: -150px
+      background-image: url(../images/project-images/faded_lines-wedding-blue@2x.png)
+
+    &::after
+      bottom: -86px
+      left: 217px
+      background-image: url(../images/project-images/faded_lines-wedding-blue@2x.png)
+      background-position: 0 100%
+      background-repeat: no-repeat
+
+.project-figure__image
+  width: 100%
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .5)
+  z-index: 1
