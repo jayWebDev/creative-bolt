@@ -109,34 +109,65 @@ ul {
 .photo-mosaic {
   display: table;
   position: relative;
-  left: 33%;
-  width: 150%;
-  margin: 0 -5.8% 150px;
-  transform: translateX(-33%) rotate(-30deg);
+  margin: 0 0 150px;
   z-index: 1;
 }
-.photo-mosaic__column {
+.photo-mosaic.tilt-left {
+  transform: rotate(-30deg);
+}
+.photo-mosaic.tilt-right {
+  transform: rotate(30deg);
+}
+.photo-mosaic--wedding-mobile {
+  width: 111.6666%;
+  margin-left: -5.833333333333333%;
+}
+.photo-mosaic--wedding-invite {
+  width: 107.6388%;
+  margin-left: -3.888888888888889%;
+}
+.mosaic__column {
   display: table-cell;
-  padding: 0 1.7%;
   vertical-align: top;
 }
-.photo-mosaic__column:first-of-type {
+.mosaic__column--wedding-mobile {
+  padding: 0 1.7361%;
+}
+.mosaic__column--wedding-invite {
+  padding: 0 1.25%;
+}
+.mosaic__column:first-of-type {
   padding-left: 0;
 }
-.photo-mosaic__column:last-of-type {
+.mosaic__column:last-of-type {
   padding-right: 0;
 }
-.photo-mosaic__column-1 {
+.mosaic__column--wedding-mobile-1 {
   padding-top: 375px;
 }
-.photo-mosaic__column-2 {
+.mosaic__column--wedding-mobile-2 {
   padding-top: 278px;
 }
-.photo-mosaic__column-3 {
+.mosaic__column--wedding-mobile-3 {
   padding-top: 166px;
 }
-.photo-mosaic--cols-7 .photo-mosaic__column {
+.mosaic__column--wedding-invite-1 {
+  padding-top: 420px;
+}
+.mosaic__column--wedding-invite-2 {
+  padding-top: 110px;
+}
+.mosaic__column--wedding-invite-3 {
+  padding-top: 420px;
+}
+.mosaic__column--wedding-invite-4 {
+  padding-top: 110px;
+}
+.photo-mosaic--cols-7 .mosaic__column {
   width: 0.166666666666667%;
+}
+.photo-mosaic--cols-4 .mosaic__column {
+  width: 0.277083333333333%;
 }
 .photo-mosiac__image {
   display: inline-block;
@@ -1390,41 +1421,50 @@ ul {
   transform: rotate(-30deg);
 }
 .section--wedding-website-5::after {
-  bottom: -550px;
-  right: -33%;
+  bottom: -650px;
+  right: -20%;
   transform: rotate(-75deg);
 }
-.section--wedding-website-5 .wedding-website__content {
+.section--wedding-website-6 {
   position: relative;
 }
-.section--wedding-website-5 .wedding-website__content::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 21%;
-  width: 100%;
-  padding-top: 75%;
-  background-color: #6b1e6b;
-  z-index: 0;
-}
-.section--wedding-website-7 {
-  position: relative;
-}
-.section--wedding-website-7::before {
+.section--wedding-website-6::before {
   content: '';
   display: block;
   position: absolute;
   width: 100%;
   max-width: 960px;
   height: 100%;
+  top: 170px;
+  left: -25%;
   background-image: url("../images/project-images/wedding/faded_lines-wedding-purple@2x.png");
   background-size: contain;
   background-repeat: no-repeat;
   z-index: -1;
 }
-.section--wedding-website-7::before {
-  top: -60px;
-  left: -25%;
+.color-block {
+  position: relative;
+}
+.color-block::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+.color-block--wedding-primary::after {
+  background-color: #6b1e6b;
+}
+.color-block--wedding-primary-lighter::after {
+  background-color: #a864a8;
+}
+.color-block--wedding-website-1::after {
+  top: 19%;
+  padding-top: 67.01388888888889%;
+}
+.color-block--wedding-website-2::after {
+  top: 50%;
+  padding-top: 65.27777777777779%;
 }
 .project__figure {
   display: block;

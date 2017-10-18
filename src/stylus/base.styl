@@ -94,16 +94,32 @@ ul
 .photo-mosaic
   display: table
   position: relative
-  left: 33%
-  width: 150%
-  margin: 0 -5.8% 150px
-  transform: translateX(-33%) rotate(-30deg)
+  margin: 0 0 150px
   z-index: 1
 
-.photo-mosaic__column
+  &.tilt-left
+    transform: rotate(-30deg)
+
+  &.tilt-right
+    transform: rotate(30deg)
+
+  &--wedding-mobile
+    width: 111.6666%
+    margin-left: -(84/1440) * 100%
+
+  &--wedding-invite
+    width: 107.6388%
+    margin-left: -(56/1440) * 100%
+
+.mosaic__column
   display: table-cell
-  padding: 0 1.7%
   vertical-align: top
+
+  &--wedding-mobile
+    padding: 0 1.7361%
+
+  &--wedding-invite
+    padding: 0 (18/1440*100)%
 
   &:first-of-type
     padding-left: 0
@@ -111,18 +127,34 @@ ul
   &:last-of-type
     padding-right: 0
 
-  &-1
-    padding-top: 375px
+.mosaic__column--wedding-mobile-1
+  padding-top: 375px
 
-  &-2
-    padding-top: 278px
+.mosaic__column--wedding-mobile-2
+  padding-top: 278px
 
-  &-3
-    padding-top: 166px
+.mosaic__column--wedding-mobile-3
+  padding-top: 166px
+
+.mosaic__column--wedding-invite-1
+  padding-top: 420px
+
+.mosaic__column--wedding-invite-2
+  padding-top: 110px
+
+.mosaic__column--wedding-invite-3
+  padding-top: 420px
+
+.mosaic__column--wedding-invite-4
+  padding-top: 110px
 
 .photo-mosaic--cols-7
-  & .photo-mosaic__column
+  & .mosaic__column
     width: (240/1440)%
+
+.photo-mosaic--cols-4
+  & .mosaic__column
+    width: (399/1440)%
 
 .photo-mosiac__image
   display: inline-block
