@@ -111,7 +111,7 @@ ul {
   position: relative;
   left: 33%;
   width: 150%;
-  margin: 0 -5.8%;
+  margin: 0 -5.8% 150px;
   transform: translateX(-33%) rotate(-30deg);
   z-index: 1;
 }
@@ -1407,6 +1407,25 @@ ul {
   background-color: #6b1e6b;
   z-index: 0;
 }
+.section--wedding-website-7 {
+  position: relative;
+}
+.section--wedding-website-7::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  max-width: 960px;
+  height: 100%;
+  background-image: url("../images/project-images/wedding/faded_lines-wedding-purple@2x.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.section--wedding-website-7::before {
+  top: -60px;
+  left: -25%;
+}
 .project__figure {
   display: block;
   position: relative;
@@ -1426,12 +1445,12 @@ ul {
   content: '';
   display: block;
   position: absolute;
-  top: 0;
-  bottom: 23px;
+  top: 17px;
+  bottom: 27px;
   left: 0px;
   right: 0px;
   background-color: rgba(255,255,255,0);
-  box-shadow: 0 20px 30px -5px rgba(0,0,0,0.5);
+  box-shadow: 0 15px 35px -5px rgba(0,0,0,0.5);
   z-index: -1;
 }
 .project__figure--wedding-1::before,
@@ -1464,18 +1483,47 @@ ul {
 .project__image {
   max-width: 100%;
   border-radius: 10px;
-  box-shadow: 0 10px 20px -5px rgba(0,0,0,0.5);
+  box-shadow: 0 5px 22px -5px rgba(0,0,0,0.5);
   z-index: 1;
 }
 .project__image--alpha {
   border-radius: none;
   box-shadow: none;
 }
+.project__image--no-fill {
+  display: block;
+  max-width: 50%;
+  margin: 0 auto 50px;
+}
 .project__image--overflow-left {
   margin-left: -95px;
 }
 .project__image--overflow-right {
   margin-left: 95px;
+}
+.project__video {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto 150px;
+  padding: 0 8.33333%;
+}
+.project__video--wedding-1::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -150px;
+  left: 30%;
+  width: 100%;
+  max-width: 960px;
+  padding-top: 83.33333%;
+  background-image: url("../images/project-images/wedding/faded_lines-wedding-blue@2x.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+  z-index: -1;
+}
+.project__video .wistia_responsive_padding {
+  box-shadow: 0 5px 22px -5px rgba(0,0,0,0.5);
 }
 .project-row {
   margin-bottom: 90px;
