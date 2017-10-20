@@ -1,7 +1,46 @@
-.section
-  &--wedding-website-3
+.deco-bg-lines
+  &--top
+  &--bottom
     position: relative
 
+  &--top
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      width: 100%
+      max-width: 960px
+      height: 100%
+      background-size: contain
+      background-repeat: no-repeat
+      z-index: -1
+
+  &--bottom
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      width: 100%
+      max-width: 960px
+      height: 100%
+      background-size: contain
+      background-repeat: no-repeat
+      z-index: -1
+
+  &--wedding-primary-color
+    background-image: url(../images/project-images/wedding/faded_lines-wedding-purple@2x.png)
+
+  &--wedding-secondary-color
+    background-image: url(../images/project-images/wedding/faded_lines-wedding-blue@2x.png)
+    
+.section
+  &--wedding-website-3
+  &--wedding-website-5
+  &--wedding-website-6
+    position: relative
+
+  &--wedding-website-3
+  &--wedding-website-5
     &::before,
     &::after
       content: ''
@@ -10,11 +49,28 @@
       width: 100%
       max-width: 960px
       height: 100%
-      left: 50%
       background-size: contain
       background-repeat: no-repeat
-      transform: translateX(-50%)
       z-index: -1
+
+  &--wedding-website-6
+    &::before,
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      width: 100%
+      max-width: 960px
+      height: 100%
+      background-size: contain
+      background-repeat: no-repeat
+      z-index: -1
+
+  &--wedding-website-3
+    &::before,
+    &::after
+      left: 50%
+      transform: translateX(-50%)
 
     &::before
       top: -550px
@@ -26,8 +82,6 @@
       transform: translateX(-50%) rotate(-22deg)
 
   &--wedding-website-5
-    position: relative
-
     &::before
     &::after
       content: ''
@@ -52,23 +106,12 @@
       transform: rotate(-75deg)
 
   &--wedding-website-6
-    position: relative
-
     &::before
-      content: ''
-      display: block
-      position: absolute
-      width: 100%
-      max-width: 960px
-      height: 100%
       top: 170px
       left: -25%
       background-image: url(../images/project-images/wedding/faded_lines-wedding-purple@2x.png)
-      background-size: contain
-      background-repeat: no-repeat
-      z-index: -1
 
-.color-block
+.deco-color-block
   position: relative
 
   &::after
@@ -93,7 +136,7 @@
 
   &--wedding-website-2
     &::after
-      top: 50%
+      top: 25%
       padding-top: (940/1440) * 100%
 
 .project__figure

@@ -1373,22 +1373,73 @@ ul {
     display: inline;
   }
 }
-.section--wedding-website-3 {
+.deco-bg-lines--top,
+.deco-bg-lines--bottom {
   position: relative;
 }
-.section--wedding-website-3::before,
-.section--wedding-website-3::after {
+.deco-bg-lines--top::before {
   content: '';
   display: block;
   position: absolute;
   width: 100%;
   max-width: 960px;
   height: 100%;
-  left: 50%;
   background-size: contain;
   background-repeat: no-repeat;
-  transform: translateX(-50%);
   z-index: -1;
+}
+.deco-bg-lines--bottom::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  max-width: 960px;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.deco-bg-lines--wedding-primary-color {
+  background-image: url("../images/project-images/wedding/faded_lines-wedding-purple@2x.png");
+}
+.deco-bg-lines--wedding-secondary-color {
+  background-image: url("../images/project-images/wedding/faded_lines-wedding-blue@2x.png");
+}
+.section--wedding-website-3,
+.section--wedding-website-5,
+.section--wedding-website-6 {
+  position: relative;
+}
+.section--wedding-website-3::before,
+.section--wedding-website-5::before,
+.section--wedding-website-3::after,
+.section--wedding-website-5::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  max-width: 960px;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.section--wedding-website-6::before,
+.section--wedding-website-6::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  max-width: 960px;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+.section--wedding-website-3::before,
+.section--wedding-website-3::after {
+  left: 50%;
+  transform: translateX(-50%);
 }
 .section--wedding-website-3::before {
   top: -550px;
@@ -1398,9 +1449,6 @@ ul {
   bottom: -530px;
   background-image: url("../images/project-images/wedding/faded_lines-wedding-blue@2x.png");
   transform: translateX(-50%) rotate(-22deg);
-}
-.section--wedding-website-5 {
-  position: relative;
 }
 .section--wedding-website-5::before,
 .section--wedding-website-5::after {
@@ -1425,45 +1473,33 @@ ul {
   right: -20%;
   transform: rotate(-75deg);
 }
-.section--wedding-website-6 {
-  position: relative;
-}
 .section--wedding-website-6::before {
-  content: '';
-  display: block;
-  position: absolute;
-  width: 100%;
-  max-width: 960px;
-  height: 100%;
   top: 170px;
   left: -25%;
   background-image: url("../images/project-images/wedding/faded_lines-wedding-purple@2x.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: -1;
 }
-.color-block {
+.deco-color-block {
   position: relative;
 }
-.color-block::after {
+.deco-color-block::after {
   content: '';
   display: block;
   position: absolute;
   width: 100%;
   z-index: 0;
 }
-.color-block--wedding-primary::after {
+.deco-color-block--wedding-primary::after {
   background-color: #6b1e6b;
 }
-.color-block--wedding-primary-lighter::after {
+.deco-color-block--wedding-primary-lighter::after {
   background-color: #a864a8;
 }
-.color-block--wedding-website-1::after {
+.deco-color-block--wedding-website-1::after {
   top: 19%;
   padding-top: 67.01388888888889%;
 }
-.color-block--wedding-website-2::after {
-  top: 50%;
+.deco-color-block--wedding-website-2::after {
+  top: 25%;
   padding-top: 65.27777777777779%;
 }
 .project__figure {
