@@ -109,6 +109,18 @@
       bottom: 30px
       left: 4%
 
+  &--wedding-7
+    &::before
+      top: -293px
+      left: -19%
+      transform: rotate(-315deg)
+
+    &::after
+      bottom: -270px
+      left: 16%
+      transform: rotate(-315deg)
+
+
 .deco-color-block
   position: relative
 
@@ -141,12 +153,11 @@
   display: block
   position: relative
   width: 100%
-  margin: 0
+  margin: 0 auto 100px
 
 .project__figure--full-width,
 .project__figure--alpha
   max-width: 960px
-  margin: 0 auto 90px
 
 .project__figure--alpha
   position: relative
@@ -182,7 +193,7 @@
 .project__image--no-fill
   display: block
   max-width: 50%
-  margin: 0 auto 50px
+  margin: 0 auto 100px
 
 .project__image--overflow-left
   margin-left: -95px
@@ -199,6 +210,33 @@
   & .wistia_responsive_padding
     box-shadow: project-shadow
 
+.project__color
+  width: 100%
+  clearfix()
+
+.project__color-block
+  display: inline-block
+  float: left
+  width: 100%
+  max-width: 130px
+  max-height: 130px
+  padding-top: 100%
+
+.project__type-specimen
+.project__type-label
+  display: block
+  width: 100%
+  margin: 0 auto
+  text-align: center
+
+.project__type-specimen
+  max-width: 270px
+  margin-bottom: 15px
+
+.project__type-label
+  padding-top: 15px
+  border-top: 1px solid #BDBFC2
+
 .project-row
   margin-bottom: 90px
   clearfix()
@@ -206,5 +244,15 @@
 .project-column
   float: left
 
+.project-column--center
+  float: none
+  margin: 0 auto
+
+.project-column--40w
+  width: 40%
+
 .project-column--50w
   width: 50%
+
+.project-column--60w
+  width: 60%
