@@ -47,6 +47,9 @@ ul
 .section-container
   max-width: 960px
 
+  &--full-width
+    max-width: 100%
+
 .section-headline
   display: inline-block
   padding: 0 20px
@@ -57,7 +60,7 @@ ul
   position: relative
   z-index: 1
 
-.section-headline--secondary
+.section-secondary-headline
   position: relative
   width: 100%
   margin: 0 35px 30px
@@ -76,6 +79,9 @@ ul
     width: (145/960) * 100%
     height: 10px
 
+.section-secondary-headline--project
+  margin: 0 95px 65px
+  
 .underline--wedding-primary
   &::after
     background-color: wedding-primary-color
@@ -158,4 +164,7 @@ ul
 
 .photo-mosiac__image
   display: inline-block
-  margin-bottom: 50px
+  margin-bottom: 25px
+
+  +mq-min(800px)
+    margin-bottom: 50px

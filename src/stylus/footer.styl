@@ -1,5 +1,18 @@
-.section--footer
-  background-color: main-color
+.footer
+
+  &--main
+    background-color: main-color
+
+    .footer__icon
+      border-bottom-color: secondary-color
+      fill: secondary-color
+
+  &--wedding
+    background-color: wedding-primary-color
+
+    .footer__icon
+      border-bottom-color: wedding-primary-lighter
+      fill: wedding-primary-lighter
 
 .footer__content
   padding: 60px 15px 30px
@@ -14,8 +27,9 @@
   max-width: 30px
   margin: 0 20px 50px
   padding-bottom: 20px
-  border-bottom: 10px solid secondary-color
-  fill: secondary-color
+  border-bottom-width: 10px
+  border-bottom-style: solid
+  border-bottom: 10px solid
 
   +mq-min(400px)
     max-width: 50px

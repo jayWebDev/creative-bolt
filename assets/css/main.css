@@ -61,6 +61,9 @@ ul {
 .section-container {
   max-width: 960px;
 }
+.section-container--full-width {
+  max-width: 100%;
+}
 .section-headline {
   display: inline-block;
   padding: 0 20px;
@@ -71,7 +74,7 @@ ul {
   position: relative;
   z-index: 1;
 }
-.section-headline--secondary {
+.section-secondary-headline {
   position: relative;
   width: 100%;
   margin: 0 35px 30px;
@@ -79,11 +82,11 @@ ul {
   line-height: 1.1;
 }
 @media screen and (min-width: 960px) {
-  .section-headline--secondary {
+  .section-secondary-headline {
     margin: 0 95px 65px;
   }
 }
-.section-headline--secondary::after {
+.section-secondary-headline::after {
   content: '';
   display: block;
   position: absolute;
@@ -91,6 +94,9 @@ ul {
   left: 0;
   width: 15.104166666666666%;
   height: 10px;
+}
+.section-secondary-headline--project {
+  margin: 0 95px 65px;
 }
 .underline--wedding-primary::after {
   background-color: #6b1e6b;
@@ -171,7 +177,12 @@ ul {
 }
 .photo-mosiac__image {
   display: inline-block;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+}
+@media screen and (min-width: 800px) {
+  .photo-mosiac__image {
+    margin-bottom: 50px;
+  }
 }
 .bg-color--main {
   background-color: #006959;
@@ -241,6 +252,9 @@ ul {
 }
 .text--strong {
   font-weight: 700;
+}
+.text-center {
+  text-align: center;
 }
 .lg-btm-mg {
   margin-bottom: 100px;
@@ -1322,8 +1336,19 @@ ul {
 .form__button:hover::before {
   height: 100%;
 }
-.section--footer {
+.footer--main {
   background-color: #006959;
+}
+.footer--main .footer__icon {
+  border-bottom-color: #be985b;
+  fill: #be985b;
+}
+.footer--wedding {
+  background-color: #6b1e6b;
+}
+.footer--wedding .footer__icon {
+  border-bottom-color: #a864a8;
+  fill: #a864a8;
 }
 .footer__content {
   padding: 60px 15px 30px;
@@ -1338,8 +1363,9 @@ ul {
   max-width: 30px;
   margin: 0 20px 50px;
   padding-bottom: 20px;
-  border-bottom: 10px solid #be985b;
-  fill: #be985b;
+  border-bottom-width: 10px;
+  border-bottom-style: solid;
+  border-bottom: 10px solid;
 }
 @media screen and (min-width: 400px) {
   .footer__icon {
@@ -1517,15 +1543,26 @@ ul {
 .project__figure {
   display: block;
   position: relative;
-  width: 100%;
   margin: 0 auto 100px;
 }
-.project__figure--full-width,
-.project__figure--alpha {
+.project__figure--full-width {
+  width: 80%;
   max-width: 960px;
 }
+@media screen and (min-width: 960px) {
+  .project__figure--full-width {
+    width: 100%;
+  }
+}
+.project__figure--half-width {
+  width: 60%;
+}
+@media screen and (min-width: 800px) {
+  .project__figure--half-width {
+    width: 50%;
+  }
+}
 .project__figure--alpha {
-  position: relative;
   z-index: 0;
 }
 .project__figure--alpha::after {
@@ -1540,29 +1577,32 @@ ul {
   box-shadow: 0 15px 35px -5px rgba(0,0,0,0.5);
   z-index: -1;
 }
-.project__figure--wedding-1 .project__image {
-  margin-top: 230px;
+@media screen and (min-width: 800px) {
+  .project__figure--wedding-1 .project__image {
+    margin-top: 230px;
+  }
 }
 .project__image {
+  display: block;
   max-width: 100%;
   border-radius: 10px;
   box-shadow: 0 5px 22px -5px rgba(0,0,0,0.5);
   z-index: 1;
 }
+.project__image--no-shadow,
 .project__image--alpha {
   border-radius: none;
   box-shadow: none;
 }
-.project__image--no-fill {
-  display: block;
-  max-width: 50%;
-  margin: 0 auto 100px;
+@media screen and (min-width: 800px) {
+  .project__image--overflow-left {
+    margin-left: -95px;
+  }
 }
-.project__image--overflow-left {
-  margin-left: -95px;
-}
-.project__image--overflow-right {
-  margin-left: 95px;
+@media screen and (min-width: 800px) {
+  .project__image--overflow-right {
+    margin-left: 95px;
+  }
 }
 .project__video {
   position: relative;
@@ -1573,39 +1613,88 @@ ul {
 .project__video .wistia_responsive_padding {
   box-shadow: 0 5px 22px -5px rgba(0,0,0,0.5);
 }
-.project__color {
-  width: 100%;
-}
-.project__color:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-.project__color-block {
+.project-colors {
   display: inline-block;
-  float: left;
-  width: 100%;
-  max-width: 130px;
-  max-height: 130px;
-  padding-top: 100%;
+  margin: 0 30px 0;
 }
-.project__type-specimen,
-.project__type-label {
+.project-colors:last-of-type {
+  margin-left: 0;
+}
+.project-colors__block {
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  margin-right: 30px;
+  border-radius: 10px;
+}
+.project-colors__block:last-of-type {
+  margin-right: 0;
+}
+.project-type {
+  display: inline-block;
+}
+.project-type--specimen {
   display: block;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-.project__type-specimen {
   max-width: 270px;
-  margin-bottom: 15px;
 }
-.project__type-label {
+.project-figcaption {
+  margin-top: 15px;
   padding-top: 15px;
   border-top: 1px solid #bdbfc2;
+  text-align: center;
+}
+.project-navigation {
+  padding: 50px 0;
+  border-top: 1px solid #bdbfc2;
+  text-align: center;
+}
+.project-navigation__container {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
+.project-navigation__image {
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  margin-right: 30px;
+  background: 12% 6%/700% no-repeat;
+  box-shadow: 0 5px 22px -5px rgba(0,0,0,0.5);
+}
+.project-navigation__image--roster-web {
+  background-image: url("../images/roster-portfolio-img@2x.jpg");
+}
+.project-navigation__label {
+  display: inline-block;
+  width: 60.416666666666664%;
+  max-width: 290px;
+  color: #6b1e6b;
+  text-align: left;
+  text-transform: uppercase;
+  vertical-align: top;
+}
+.project-navigation__direction {
+  margin: 0 0 15px;
+}
+.project-navigation__title {
+  margin: 0;
+}
+.project-navigation__title::after {
+  content: '';
+  display: block;
+  position: relative;
+  bottom: -15px;
+  width: 30.208333333333332%;
+  height: 10px;
+  background-color: #6b1e6b;
+}
+.project-navigation__direction,
+.project-navigation__title {
+  display: inline-block;
 }
 .project-row {
   margin-bottom: 90px;
+  text-align: center;
 }
 .project-row:after {
   content: '';
@@ -1613,18 +1702,26 @@ ul {
   clear: both;
 }
 .project-column {
-  float: left;
-}
-.project-column--center {
-  float: none;
+  width: 60%;
   margin: 0 auto;
 }
-.project-column--40w {
-  width: 40%;
+@media screen and (min-width: 800px) {
+  .project-column {
+    float: left;
+  }
 }
-.project-column--50w {
-  width: 50%;
+@media screen and (min-width: 800px) {
+  .project-column--40w {
+    width: 40%;
+  }
 }
-.project-column--60w {
-  width: 60%;
+@media screen and (min-width: 800px) {
+  .project-column--50w {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .project-column--60w {
+    width: 60%;
+  }
 }
