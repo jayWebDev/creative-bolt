@@ -52,6 +52,16 @@ ul {
   padding: 0;
   list-style-type: none;
 }
+.page-container {
+  max-width: 960px;
+  overflow-x: hidden;
+}
+@media screen and (min-width: 960px) {
+  .page-container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 .section-container {
   display: block;
   position: relative;
@@ -67,7 +77,6 @@ ul {
 .section-headline {
   display: inline-block;
   padding: 0 20px;
-  box-shadow: 0 15px 20px -7px rgba(0,0,0,0.5);
   color: #fff;
 }
 .section-headline-wrapper {
@@ -77,13 +86,14 @@ ul {
 .section-secondary-headline {
   position: relative;
   width: 100%;
-  margin: 0 35px 30px;
-  padding-bottom: 25px;
+  margin: 0 0 30px 35px;
+  padding: 0 35px 35px 0;
   line-height: 1.1;
 }
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 500px) {
   .section-secondary-headline {
-    margin: 0 95px 65px;
+    margin: 0 0 30px 95px;
+    padding: 0 95px 35px 0;
   }
 }
 .section-secondary-headline::after {
@@ -95,9 +105,6 @@ ul {
   width: 15.104166666666666%;
   height: 10px;
 }
-.section-secondary-headline--project {
-  margin: 0 95px 65px;
-}
 .underline--wedding-primary::after {
   background-color: #6b1e6b;
 }
@@ -105,7 +112,12 @@ ul {
   margin-bottom: 90px;
 }
 .section-description__paragraph {
-  margin: 0 95px;
+  margin: 0 35px;
+}
+@media screen and (min-width: 500px) {
+  .section-description__paragraph {
+    margin: 0 95px;
+  }
 }
 .button {
   text-decoration: none;
@@ -262,99 +274,64 @@ ul {
 .main-nav {
   position: relative;
   width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
-  background: #ffc0cb;
   z-index: 1;
 }
-@media screen and (min-width: 1100px) {
-  .main-nav {
-    max-width: 960px;
-  }
+.main-nav--primary .main-nav__logo-wrapper {
+  fill: #be985b;
+}
+.main-nav--primary .main-nav__list {
+  color: #006959;
+}
+.main-nav--primary .main-nav__list::before {
+  background-color: #be985b;
+}
+.main-nav--primary .main-nav__item:last-of-type {
+  color: #be985b;
+}
+.main-nav--wedding .main-nav__logo-wrapper {
+  fill: #a864a8;
+}
+.main-nav--wedding .main-nav__list {
+  color: #a864a8;
+}
+.main-nav--wedding .main-nav__list::before {
+  background-color: #a864a8;
+}
+.main-nav--wedding .main-nav__item:last-of-type {
+  color: #6b1e6b;
 }
 .main-nav__container {
-  position: fixed;
+  position: absolute;
+  top: 0;
   display: flex;
-  width: 100%;
-  margin: 0 auto;
-  background-color: rgba(255,255,255,0.8);
-  border-bottom: 1px solid #be985b;
-}
-@media screen and (min-width: 1100px) {
-  .main-nav__container {
-    flex-direction: column;
-    align-items: start;
-    display: inline-block;
-    width: auto;
-    margin-left: -50px;
-    border-right: 1px solid #be985b;
-    border-bottom: none;
-  }
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
 }
 .main-nav__logo-wrapper {
   position: relative;
   top: 15px;
-  width: 43px;
-  height: 88.08px;
-  margin: 0 20px 0 15px;
-}
-@media screen and (min-width: 376px) {
-  .main-nav__logo-wrapper {
-    top: 10px;
-    width: 34.17px;
-    height: 70px;
-    margin: 0 45px 0 50px;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .main-nav__logo-wrapper {
-    width: 25.87px;
-    height: 53px;
-    margin: 10px 0 20px 15px;
-  }
+  width: 25.87px;
+  margin: 5px 50px 0 15px;
 }
 .main-nav__list {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: stretch;
+  flex-direction: column;
   flex: 1;
-  padding: 12px 0;
-  color: #006959;
+  transform: rotate(-90deg);
 }
-@media screen and (min-width: 376px) {
-  .main-nav__list {
-    padding: 0;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .main-nav__list {
-    flex-direction: column;
-    align-items: start;
-  }
+.main-nav__list::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -10px;
+  right: -20px;
+  height: 1px;
 }
 .main-nav__item {
-  display: flex;
-  align-items: center;
-  flex-basis: 33.3333%;
-}
-@media screen and (min-width: 376px) {
-  .main-nav__item {
-    flex: none;
-    padding-right: 1.888888888888889em;
-  }
-}
-.main-nav__item:last-of-type {
-  color: #be985b;
-}
-@media screen and (min-width: 620px) {
-  .main-nav__item:last-of-type {
-    margin-left: auto;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .main-nav__item:last-of-type {
-    margin-left: 0;
-  }
+  text-align: right;
 }
 .page__hero {
   position: relative;
@@ -365,14 +342,6 @@ ul {
 }
 .hero--home {
   background: url("../images/faded_lines-01@2x.jpg") center -385px/960px no-repeat;
-}
-.hero--wedding {
-  background: url("../images/project-images/wedding/faded_lines-wedding-purple@2x.png") 60% -237px/960px no-repeat;
-}
-@media screen and (min-width: 960px) {
-  .hero--wedding {
-    background-position: -20% -237px;
-  }
 }
 .hero__content {
   max-width: 960px;

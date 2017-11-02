@@ -1,78 +1,65 @@
 .main-nav
   position: relative
   width: 100%
+  max-width: 1000px
   margin: 0 auto
-  background: pink
   z-index: 1
 
-  +mq-min(1100px)
-    max-width: 960px
+  &--primary
+    .main-nav__logo-wrapper
+      fill: secondary-color
+
+    .main-nav__list
+      color: main-color
+
+      &::before
+        background-color: secondary-color
+
+    .main-nav__item
+      &:last-of-type
+        color: secondary-color
+
+  &--wedding
+    .main-nav__logo-wrapper
+      fill: wedding-primary-lighter
+
+    .main-nav__list
+      color: wedding-primary-lighter
+
+      &::before
+        background-color: wedding-primary-lighter
+
+    .main-nav__item
+      &:last-of-type
+        color: wedding-primary-color
 
 .main-nav__container
-  position: fixed
+  position: absolute
+  top: 0
   display: flex
-  width: 100%
-  margin: 0 auto
-  background-color: alpha(white, 0.8)
-  border-bottom: 1px solid secondary-color
-
-  +mq-min(1100px)
-    flex-direction: column
-    align-items: start
-    display: inline-block
-    width: auto
-    margin-left: -50px
-    border-right: 1px solid secondary-color
-    border-bottom: none
+  flex-direction: row
+  justify-content: start
+  align-items: start
 
 .main-nav__logo-wrapper
   position: relative
   top: 15px
-  width: 43px
-  height: 88.08px
-  margin: 0 20px 0 15px
-
-  +mq-min(376px)
-    top: 10px
-    width: 34.17px
-    height: 70px
-    margin: 0 45px 0 50px
-
-  +mq-min(1100px)
-    width: 25.87px
-    height: 53px
-    margin: 10px 0 20px 15px
+  width: 25.87px
+  margin: 5px 50px 0 15px
 
 .main-nav__list
   display: flex
-  flex-direction: row
-  flex-wrap: wrap
-  align-items: stretch
+  flex-direction: column
   flex: 1
-  padding: 12px 0
-  color: main-color
+  transform: rotate(-90deg)
 
-  +mq-min(376px)
-    padding: 0
-
-  +mq-min(1100px)
-    flex-direction: column
-    align-items: start
+  &::before
+    content: ''
+    position: absolute
+    top: -15px
+    left: -10px
+    right: -20px
+    height: 1px
 
 .main-nav__item
-  display: flex
-  align-items: center
-  flex-basis: 33.3333%
-
-  +mq-min(376px)
-    flex: none
-    padding-right: (34/font-size)em
-
-  &:last-of-type
-    color: secondary-color
-
-    +mq-min(620px)
-      margin-left: auto
-
-    +mq-min(1100px)
-      margin-left: 0
+  text-align: right

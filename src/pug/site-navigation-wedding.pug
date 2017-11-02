@@ -1,0 +1,11 @@
+- var sections = ['About Me','Knowledge','Projects','Resume','Contact'];
+
+nav.main-nav.main-nav--wedding
+  .main-nav__container
+    .main-nav__logo-wrapper
+      include ../../assets/images/js-logo-hero.min.svg
+
+    ul.main-nav__list
+      each section in sections
+        li.main-nav__item
+          a= section
