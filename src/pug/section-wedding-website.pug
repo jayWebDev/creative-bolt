@@ -144,30 +144,30 @@ section.section--wedding
       .section-description
         h3.section-secondary-headline.section-secondary-headline--project.underline--wedding-primary.text--wedding-primary Color &amp; Type
     
-      .project-row
-        figure.project-colors
+      .project-colors
+        figure.project-colors__figure
           .project-colors__block.bg-color--wedding-primary
           .project-colors__block.bg-color--wedding-lighter
           .project-colors__block.bg-color--wedding-secondary
           figcaption.project-figcaption.project-figcaption--color Primary Colors
-        figure.project-colors
+        figure.project-colors__figure
           .project-colors__block.bg-color--wedding-secondary-lighter
           .project-colors__block.bg-color--wedding-tertiary
           figcaption.project-figcaption.project-figcaption--color Additional Colors
 
-      .project-row
-          figure.project-type
-            img.project-type--specimen(src='/assets/images/project-images/wedding/project-type-alana-pro@2x.png')
-            figcaption.project-figcaption.project-figcaption--type Headline Type
+        .project-typography
+          figure.project-typography__figure
+            img.project-typography__specimen(src='/assets/images/project-images/wedding/project-type-alana-pro@2x.png')
+            figcaption.project-figcaption.project-figcaption--typography Headline Type
           
-      .project-row
-          figure.project-type
-            img.project-type--specimen(src='/assets/images/project-images/wedding/project-type-georgia@2x.png')
-            figcaption.project-figcaption.project-figcaption--type Body Copy - Web
+        .project-type
+          figure.project-typography__figure
+            img.project-typography__specimen(src='/assets/images/project-images/wedding/project-type-georgia@2x.png')
+            figcaption.project-figcaption.project-figcaption--typography Body Copy - Web
 
-          figure.project-type
-            img.project-type--specimen(src='/assets/images/project-images/wedding/project-type-chaparral@2x.png')                       
-            figcaption.project-figcaption.project-figcaption--type Body Copy - Print
+          figure.project-typography__figure
+            img.project-typography__specimen(src='/assets/images/project-images/wedding/project-type-chaparral@2x.png')                       
+            figcaption.project-figcaption.project-figcaption--typography Body Copy - Print
 
 section.section--wedding
   .section-container--full-width
@@ -175,11 +175,10 @@ section.section--wedding
 
       nav.project-navigation.project-navigation--wedding
         .project-navigation__container
-          a(href="/")
+          a.project-navigation__link(href="/")
+            p.project-navigation__direction Next Project ➝
             .project-navigation__image.project-navigation__image--roster-web
-            .project-navigation__label
-              p.project-navigation__direction Next Project ➝
-              h4.project-navigation__title Roster Financial Marketing Website
+            h4.project-navigation__label Roster Financial Marketing Website
 
 footer.footer.footer--wedding
   .section-container
