@@ -46,6 +46,10 @@ ul
     width: 100%
     max-width: 100%
 
+.section
+  &--wedding
+    margin-bottom: 15.625%
+
 .section-container
   display: block
   position: relative
@@ -86,9 +90,6 @@ ul
     left: 0
     width: (145/960) * 100%
     height: 10px
-//
-// .section-secondary-headline--project
-//   margin: 0 0 65px
 
 .underline--wedding-primary
   &::after
@@ -98,10 +99,7 @@ ul
   margin-bottom: 90px
 
 .section-description__paragraph
-  margin: 0 35px
-
-  +mq-min(500px)
-    margin: 0 95px;
+  margin: 0 9.6%
 
 .button
   text-decoration: none
@@ -145,33 +143,55 @@ ul
     padding-right: 0
 
 .mosaic__column--wedding-mobile-1
-  padding-top: 375px
+  padding-top: (375/1440) * 100%
+
+  +mq-min(960px)
+    padding-top: 375px
 
 .mosaic__column--wedding-mobile-2
-  padding-top: 278px
+  padding-top: (278/1440) * 100%
+
+  +mq-min(960px)
+    padding-top: 278px
 
 .mosaic__column--wedding-mobile-3
-  padding-top: 166px
+  padding-top: (166/1440) * 100%
+
+  +mq-min(960px)
+    padding-top: 166px
+
 
 .mosaic__column--wedding-invite-1
-  padding-top: 420px
+  padding-top: (420/1440) * 100%
+
+  +mq-min(960px)
+    padding-top: 420px
 
 .mosaic__column--wedding-invite-2
-  padding-top: 110px
+  padding-top: (110/1440) * 100%
+
+  +mq-min(960px)
+    padding-top: 110px
 
 .mosaic__column--wedding-invite-3
-  padding-top: 420px
+  padding-top: (420/1440) * 100%
+
+  +mq-min(960px)
+    padding-top: 420px
 
 .mosaic__column--wedding-invite-4
-  padding-top: 110px
+  padding-top: (110/1440) * 100%
+
+  +mq-min(960px)
+    padding-top: 110px
 
 .photo-mosaic--cols-7
   & .mosaic__column
-    width: (240/1440)%
+    width: (240/1440) * 100%
 
 .photo-mosaic--cols-4
   & .mosaic__column
-    width: (399/1440)%
+    width: (399/1440) * 100%
 
 .photo-mosiac__image
   display: inline-block
@@ -179,3 +199,9 @@ ul
 
   +mq-min(800px)
     margin-bottom: 50px
+
+.mosaic-column-hide
+  display: none
+
+  +mq-min(600px)
+    display: table-cell

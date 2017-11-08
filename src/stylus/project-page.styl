@@ -1,3 +1,6 @@
+.section--wedding
+  margin-bottom: 15.625%
+
 .deco-bg-lines
   &--top--wedding-primary
   &--top--wedding-secondary
@@ -152,7 +155,7 @@
 .project__figure
   display: block
   position: relative
-  margin: 0 auto 100px
+  margin: 0 auto
 
 .project__figure--full-width
   width: 80%
@@ -162,9 +165,9 @@
     width: 100%
 
 .project__figure--half-width
-  width: 60%
+  width: 70%
 
-  +mq-min(800px)
+  +mq-min(600px)
     width: 50%
 
 .project__figure--alpha
@@ -191,9 +194,12 @@
 .project__image
   display: block
   max-width: 100%
-  border-radius: border-radius
+  border-radius: border-radius-small
   box-shadow: project-shadow
   z-index: 1
+
+  +mq-min(600px)
+    border-radius: border-radius
 
 .project__image--no-shadow,
 .project__image--alpha
@@ -211,11 +217,14 @@
 .project__video
   position: relative
   max-width: 960px
-  margin: 0 auto 150px
+  margin: 0 auto
   padding: 0 8.33333%
 
   & .wistia_responsive_padding
     box-shadow: project-shadow
+
+  +mq-min(960px)
+    margin-bottom: 150px
 
 .project-colors
   margin-bottom: 90px
@@ -278,7 +287,7 @@
   text-align: center
 
 .project-navigation
-  padding: 50px 30px 75px
+  padding: 50px 30px 0
   border-top: 1px solid #BDBFC2
   text-align: center
 
@@ -295,7 +304,7 @@
   text-transform: uppercase
   color: wedding-primary-color
 
-  +mq-min(800px)
+  +mq-min(600px)
     max-width: 290px
     margin-left: 160px
 
@@ -324,7 +333,7 @@
   background: 12% 6% / 400% no-repeat
   box-shadow: project-shadow
 
-  +mq-min(800px)
+  +mq-min(600px)
     display: inline-block
     float: left
     width: 130px
@@ -342,10 +351,14 @@
 
 .project-column
   width: 60%
-  margin: 0 auto
+  margin: 0 auto 9.6%
+
+  &:last-of-type
+    margin-bottom: 0
 
   +mq-min(800px)
     float: left
+    margin-bottom: 0
 
 .project-column--40w
   +mq-min(800px)

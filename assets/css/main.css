@@ -62,6 +62,9 @@ ul {
     max-width: 100%;
   }
 }
+.section--wedding {
+  margin-bottom: 15.625%;
+}
 .section-container {
   display: block;
   position: relative;
@@ -112,12 +115,7 @@ ul {
   margin-bottom: 90px;
 }
 .section-description__paragraph {
-  margin: 0 35px;
-}
-@media screen and (min-width: 500px) {
-  .section-description__paragraph {
-    margin: 0 95px;
-  }
+  margin: 0 9.6%;
 }
 .button {
   text-decoration: none;
@@ -161,31 +159,66 @@ ul {
   padding-right: 0;
 }
 .mosaic__column--wedding-mobile-1 {
-  padding-top: 375px;
+  padding-top: 26.041666666666668%;
+}
+@media screen and (min-width: 960px) {
+  .mosaic__column--wedding-mobile-1 {
+    padding-top: 375px;
+  }
 }
 .mosaic__column--wedding-mobile-2 {
-  padding-top: 278px;
+  padding-top: 19.305555555555557%;
+}
+@media screen and (min-width: 960px) {
+  .mosaic__column--wedding-mobile-2 {
+    padding-top: 278px;
+  }
 }
 .mosaic__column--wedding-mobile-3 {
-  padding-top: 166px;
+  padding-top: 11.527777777777779%;
+}
+@media screen and (min-width: 960px) {
+  .mosaic__column--wedding-mobile-3 {
+    padding-top: 166px;
+  }
 }
 .mosaic__column--wedding-invite-1 {
-  padding-top: 420px;
+  padding-top: 29.166666666666668%;
+}
+@media screen and (min-width: 960px) {
+  .mosaic__column--wedding-invite-1 {
+    padding-top: 420px;
+  }
 }
 .mosaic__column--wedding-invite-2 {
-  padding-top: 110px;
+  padding-top: 7.638888888888889%;
+}
+@media screen and (min-width: 960px) {
+  .mosaic__column--wedding-invite-2 {
+    padding-top: 110px;
+  }
 }
 .mosaic__column--wedding-invite-3 {
-  padding-top: 420px;
+  padding-top: 29.166666666666668%;
+}
+@media screen and (min-width: 960px) {
+  .mosaic__column--wedding-invite-3 {
+    padding-top: 420px;
+  }
 }
 .mosaic__column--wedding-invite-4 {
-  padding-top: 110px;
+  padding-top: 7.638888888888889%;
+}
+@media screen and (min-width: 960px) {
+  .mosaic__column--wedding-invite-4 {
+    padding-top: 110px;
+  }
 }
 .photo-mosaic--cols-7 .mosaic__column {
-  width: 0.166666666666667%;
+  width: 16.666666666666664%;
 }
 .photo-mosaic--cols-4 .mosaic__column {
-  width: 0.277083333333333%;
+  width: 27.708333333333336%;
 }
 .photo-mosiac__image {
   display: inline-block;
@@ -196,80 +229,13 @@ ul {
     margin-bottom: 50px;
   }
 }
-.bg-color--main {
-  background-color: #006959;
+.mosaic-column-hide {
+  display: none;
 }
-.bg-color--main-lighter {
-  background-color: #56b39a;
-}
-.bg-color--secondary {
-  background-color: #be985b;
-}
-.bg-color--wedding-primary {
-  background-color: #6b1e6b;
-}
-.bg-color--wedding-lighter {
-  background-color: #a864a8;
-}
-.bg-color--wedding-secondary {
-  background-color: #0072bc;
-}
-.bg-color--wedding-secondary-lighter {
-  background-color: #c5e4f4;
-}
-.bg-color--wedding-tertiary {
-  background-color: #eff9de;
-}
-.headline--left {
-  margin: 0 auto 70px;
-  text-align: center;
-}
-@media screen and (min-width: 450px) {
-  .headline--left {
-    margin: 0 0 70px 95px;
-    text-align: left;
+@media screen and (min-width: 600px) {
+  .mosaic-column-hide {
+    display: table-cell;
   }
-}
-.headline--center {
-  margin: 0 auto 70px;
-  text-align: center;
-}
-.deco-centerline--main::after,
-.deco-centerline--secondary::after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 50%;
-  width: 100%;
-  height: 1px;
-  z-index: -1;
-}
-.deco-centerline--main::after {
-  background-color: #006959;
-}
-.deco-centerline--secondary::after {
-  background-color: #be985b;
-}
-.text--white {
-  color: #fff;
-}
-.text--main {
-  color: #006959;
-}
-.text--secondary {
-  color: #be985b;
-}
-.text--wedding-primary {
-  color: #6b1e6b;
-}
-.text--strong {
-  font-weight: 700;
-}
-.text-center {
-  text-align: center;
-}
-.lg-btm-mg {
-  margin-bottom: 100px;
 }
 .main-nav {
   position: relative;
@@ -1377,6 +1343,9 @@ ul {
     display: inline;
   }
 }
+.section--wedding {
+  margin-bottom: 15.625%;
+}
 .deco-bg-lines--top--wedding-primary,
 .deco-bg-lines--top--wedding-secondary,
 .deco-bg-lines--bottom--wedding-primary,
@@ -1512,7 +1481,7 @@ ul {
 .project__figure {
   display: block;
   position: relative;
-  margin: 0 auto 100px;
+  margin: 0 auto;
 }
 .project__figure--full-width {
   width: 80%;
@@ -1524,9 +1493,9 @@ ul {
   }
 }
 .project__figure--half-width {
-  width: 60%;
+  width: 70%;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
   .project__figure--half-width {
     width: 50%;
   }
@@ -1554,9 +1523,14 @@ ul {
 .project__image {
   display: block;
   max-width: 100%;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0 5px 22px -5px rgba(0,0,0,0.5);
   z-index: 1;
+}
+@media screen and (min-width: 600px) {
+  .project__image {
+    border-radius: 10px;
+  }
 }
 .project__image--no-shadow,
 .project__image--alpha {
@@ -1576,11 +1550,16 @@ ul {
 .project__video {
   position: relative;
   max-width: 960px;
-  margin: 0 auto 150px;
+  margin: 0 auto;
   padding: 0 8.33333%;
 }
 .project__video .wistia_responsive_padding {
   box-shadow: 0 5px 22px -5px rgba(0,0,0,0.5);
+}
+@media screen and (min-width: 960px) {
+  .project__video {
+    margin-bottom: 150px;
+  }
 }
 .project-colors {
   margin-bottom: 90px;
@@ -1652,7 +1631,7 @@ ul {
   text-align: center;
 }
 .project-navigation {
-  padding: 50px 30px 75px;
+  padding: 50px 30px 0;
   border-top: 1px solid #bdbfc2;
   text-align: center;
 }
@@ -1669,7 +1648,7 @@ ul {
   text-transform: uppercase;
   color: #6b1e6b;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
   .project-navigation__direction,
   .project-navigation__label {
     max-width: 290px;
@@ -1701,7 +1680,7 @@ ul {
   background: 12% 6%/400% no-repeat;
   box-shadow: 0 5px 22px -5px rgba(0,0,0,0.5);
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
   .project-navigation__image {
     display: inline-block;
     float: left;
@@ -1725,11 +1704,15 @@ ul {
 }
 .project-column {
   width: 60%;
-  margin: 0 auto;
+  margin: 0 auto 9.6%;
+}
+.project-column:last-of-type {
+  margin-bottom: 0;
 }
 @media screen and (min-width: 800px) {
   .project-column {
     float: left;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 800px) {
@@ -1745,5 +1728,85 @@ ul {
 @media screen and (min-width: 800px) {
   .project-column--60w {
     width: 60%;
+  }
+}
+.bg-color--main {
+  background-color: #006959;
+}
+.bg-color--main-lighter {
+  background-color: #56b39a;
+}
+.bg-color--secondary {
+  background-color: #be985b;
+}
+.bg-color--wedding-primary {
+  background-color: #6b1e6b;
+}
+.bg-color--wedding-lighter {
+  background-color: #a864a8;
+}
+.bg-color--wedding-secondary {
+  background-color: #0072bc;
+}
+.bg-color--wedding-secondary-lighter {
+  background-color: #c5e4f4;
+}
+.bg-color--wedding-tertiary {
+  background-color: #eff9de;
+}
+.headline--left {
+  margin: 0 auto 70px;
+  text-align: center;
+}
+@media screen and (min-width: 450px) {
+  .headline--left {
+    margin: 0 0 70px 95px;
+    text-align: left;
+  }
+}
+.headline--center {
+  margin: 0 auto 70px;
+  text-align: center;
+}
+.deco-centerline--main::after,
+.deco-centerline--secondary::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  z-index: -1;
+}
+.deco-centerline--main::after {
+  background-color: #006959;
+}
+.deco-centerline--secondary::after {
+  background-color: #be985b;
+}
+.text--white {
+  color: #fff;
+}
+.text--main {
+  color: #006959;
+}
+.text--secondary {
+  color: #be985b;
+}
+.text--wedding-primary {
+  color: #6b1e6b;
+}
+.text--strong {
+  font-weight: 700;
+}
+.text-center {
+  text-align: center;
+}
+.lg-btm-mg {
+  margin-bottom: 9.6%;
+}
+@media screen and (min-width: 960px) {
+  .lg-btm-mg {
+    margin-bottom: 100px;
   }
 }
