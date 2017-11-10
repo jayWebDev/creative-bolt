@@ -108,6 +108,7 @@ ul
 
 .photo-mosaic
   display: table
+  display: flex
   position: relative
   margin: 0 0 150px
   z-index: 1
@@ -128,6 +129,7 @@ ul
 
 .mosaic__column
   display: table-cell
+  flex: 1
   vertical-align: top
 
   &--wedding-mobile
@@ -142,56 +144,52 @@ ul
   &:last-of-type
     padding-right: 0
 
-.mosaic__column--wedding-mobile-1
-  padding-top: (375/1440) * 100%
-
-  +mq-min(960px)
-    padding-top: 375px
-
-.mosaic__column--wedding-mobile-2
-  padding-top: (278/1440) * 100%
-
-  +mq-min(960px)
-    padding-top: 278px
-
-.mosaic__column--wedding-mobile-3
-  padding-top: (166/1440) * 100%
-
-  +mq-min(960px)
-    padding-top: 166px
-
-
-.mosaic__column--wedding-invite-1
-  padding-top: (420/1440) * 100%
-
-  +mq-min(960px)
-    padding-top: 420px
-
-.mosaic__column--wedding-invite-2
-  padding-top: (110/1440) * 100%
-
-  +mq-min(960px)
-    padding-top: 110px
-
-.mosaic__column--wedding-invite-3
-  padding-top: (420/1440) * 100%
-
-  +mq-min(960px)
-    padding-top: 420px
-
-.mosaic__column--wedding-invite-4
-  padding-top: (110/1440) * 100%
-
-  +mq-min(960px)
-    padding-top: 110px
-
 .photo-mosaic--cols-7
-  & .mosaic__column
-    width: (240/1440) * 100%
+  & .mosaic__column--wedding-mobile:nth-child(1),
+  & .mosaic__column--wedding-mobile:nth-child(7)
+    padding-top: (375/1440) * 100%
+
+    +mq-min(960px)
+      padding-top: 375px
+
+  & .mosaic__column--wedding-mobile:nth-child(2),
+  & .mosaic__column--wedding-mobile:nth-child(6)
+    padding-top: (278/1440) * 100%
+
+    +mq-min(960px)
+      padding-top: 278px
+
+  & .mosaic__column--wedding-mobile:nth-child(3),
+  & .mosaic__column--wedding-mobile:nth-child(5)
+    padding-top: (166/1440) * 100%
+
+    +mq-min(960px)
+      padding-top: 166px
 
 .photo-mosaic--cols-4
-  & .mosaic__column
-    width: (399/1440) * 100%
+  & .mosaic__column--wedding-invite:nth-child(1)
+    padding-top: (420/1440) * 100%
+
+    +mq-min(960px)
+      padding-top: 420px
+
+  & .mosaic__column--wedding-invite:nth-child(2)
+    padding-top: (110/1440) * 100%
+
+    +mq-min(960px)
+      padding-top: 110px
+
+  & .mosaic__column--wedding-invite:nth-child(3)
+    padding-top: (420/1440) * 100%
+
+    +mq-min(960px)
+      padding-top: 420px
+
+  & .mosaic__column--wedding-invite:nth-child(4)
+    padding-top: (110/1440) * 100%
+
+    +mq-min(960px)
+      padding-top: 110px
 
 .photo-mosiac__image
   display: inline-block

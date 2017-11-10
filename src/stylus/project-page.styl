@@ -16,7 +16,7 @@
       position: absolute
       width: 100%
       max-width: 960px
-      height: 800px
+      height: (800/960) * 100%
       background-size: contain
       background-repeat: no-repeat
       z-index: -1
@@ -29,7 +29,7 @@
       position: absolute
       width: 100%
       max-width: 960px
-      height: 800px
+      height: (800/960) * 100%
       background-size: contain
       background-repeat: no-repeat
       z-index: -1
@@ -57,10 +57,10 @@
       transform: translateX(-50%)
 
     &::before
-      top: -150px
+      top: -(150/960) * 100%
 
     &::after
-      bottom: -86px
+      bottom: -(86/960) * 100%
       left: 217px
       background-position: 0 100%
 
@@ -71,36 +71,44 @@
       transform: translateX(-50%)
 
     &::before
-      top: -500px
+      top: -(500/960) * 100%
 
     &::after
-      bottom: -150px
+      bottom: -(150/960) * 100%
       transform: translateX(-50%) rotate(-22deg)
 
   &--wedding-3
     &::before
-      top: -102px
+      top: -(350/960) * 100%
       left: 15%
       transform: rotate(180deg)
 
+      +mq-min(600px)
+        top: -(150/960) * 100%
+        left: 15%
+
     &::after
-      bottom: -167px
-      right: 19%
+      bottom: -(300/960) * 100%
+      right: -40%
       transform: rotate(-75deg)
+
+      +mq-min(600px)
+        top: -(167/960) * 100%
+        right: 19%
 
   &--wedding-4
     &::before
-      top: 170px
+      top: (170/960) * 100%
       left: -20%
 
     &::after
-      top: 170px
+      top: (170/960) * 100%
       right: -25%
       transform: rotate(180deg)
 
   &--wedding-5
     &::before
-      top: -148px
+      top: -(148/960) * 100%
       left: 16%
       transform: rotate(180deg)
 
@@ -109,17 +117,17 @@
       transform: rotate(-30deg)
 
     &::after
-      bottom: 30px
+      bottom: -(300/960) * 100%
       left: 4%
 
   &--wedding-7
     &::before
-      top: -293px
+      top: -(293/960) * 100%
       left: -19%
       transform: rotate(-315deg)
 
     &::after
-      bottom: -270px
+      bottom: -(270/960) * 100%
       left: 16%
       transform: rotate(-315deg)
 
@@ -144,13 +152,22 @@
 
   &--wedding-website-1
     &::after
-      top: 19%
-      padding-top: (965/1440) * 100%
+      top: 15%
+      padding-top: (1000/960) * 100%
+
+    +mq-min(600px)
+      &::after
+        top: 19%
+        padding-top: (965/1440) * 100%
 
   &--wedding-website-2
     &::after
       top: 25%
-      padding-top: (940/1440) * 100%
+      padding-top: (940/960) * 100%
+
+    +mq-min(600px)
+      &::after
+        padding-top: (965/1440) * 100%
 
 .project__figure
   display: block
