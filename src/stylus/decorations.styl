@@ -5,7 +5,7 @@
 /*
  * Background Line Pattern Decorations
  */
- 
+
 .deco-bg-lines
   &--top--wedding-primary
   &--top--wedding-secondary
@@ -39,6 +39,10 @@
       background-repeat: no-repeat
       z-index: -1
 
+/*
+ * Background Line Pattern Decorations - Images - Wedding Project
+ */
+
   &--top--wedding-primary
     &::before
       background-image: url(../images/project-images/wedding/faded_lines-wedding-purple@2x.png)
@@ -54,6 +58,10 @@
   &--bottom--wedding-secondary
     &::after
       background-image: url(../images/project-images/wedding/faded_lines-wedding-blue@2x.png)
+
+/*
+ * Background Line Pattern Decorations - Positioning - Wedding Project
+ */
 
   &--wedding-1
     &::before,
@@ -136,6 +144,10 @@
       left: 16%
       transform: rotate(-315deg)
 
+/*
+ * Background Color Block Decorations
+ */
+
 .deco-color-block
   position: relative
 
@@ -146,6 +158,10 @@
     width: 100%
     z-index: 0
 
+/*
+ * Background Color Block Decorations - Colors - Wedding Project
+ */
+
   &--wedding-primary
     &::after
       background-color: wedding-primary-color
@@ -153,6 +169,10 @@
   &--wedding-primary-lighter
     &::after
       background-color: wedding-primary-lighter
+
+/*
+ * Background Color Block Decorations - Size and Positioning - Wedding Project
+ */
 
   &--wedding-website-1
     &::after
@@ -172,6 +192,10 @@
     +mq-min(600px)
       &::after
         padding-top: (965/1440) * 100%
+
+/*
+ * Header Center Line Decorations
+ */
 
 .deco-centerline--main,
 .deco-centerline--secondary

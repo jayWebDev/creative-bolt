@@ -1,3 +1,10 @@
+/*------------------------------------*\
+  #MOSAIC-GRIDS
+\*------------------------------------*/
+
+/*
+ * Photo Mosaic - Container
+ */
 
 .photo-mosaic
   display: table
@@ -12,6 +19,10 @@
   &.tilt-right
     transform: rotate(30deg)
 
+/*
+ * Photo Mosaic - Container - Wedding Project
+ */
+
   &--wedding-mobile
     width: 111.6666%
     margin-left: -(84/1440) * 100%
@@ -20,10 +31,19 @@
     width: 107.6388%
     margin-left: -(56/1440) * 100%
 
+/*
+ * Photo Column
+ */
+
 .mosaic__column
   display: table-cell
   flex: 1
   vertical-align: top
+
+/*
+ * Photo Mosaic - Column Side Padding - Wedding Project
+ * Creates the column gutters.
+ */
 
   &--wedding-mobile
     padding: 0 1.7361%
@@ -31,13 +51,27 @@
   &--wedding-invite
     padding: 0 (18/1440*100)%
 
+/*
+ * Removes outer padding from first and last columns.
+ */
+
   &:first-of-type
     padding-left: 0
 
   &:last-of-type
     padding-right: 0
 
+/*
+ * Photo Mosaic - 7 Column Layout
+ */
+
 .photo-mosaic--cols-7
+
+/*
+ * Photo Mosaic - 7 Column - Column Top Padding - Wedding Project - Wedding Website Mobile Version
+ * Pushes columns down to create ragged top and bottom
+ */
+
   & .mosaic__column--wedding-mobile:nth-child(1),
   & .mosaic__column--wedding-mobile:nth-child(7)
     padding-top: (375/1440) * 100%
@@ -59,7 +93,17 @@
     +mq-min(960px)
       padding-top: 166px
 
+/*
+ * Photo Mosaic - 4 Column Layout
+ */
+
 .photo-mosaic--cols-4
+
+/*
+ * Photo Mosaic - 4 Column - Column Top Padding - Wedding Project - Wedding Invite
+ * Pushes columns down to create ragged top and bottom
+ */
+
   & .mosaic__column--wedding-invite:nth-child(1)
     padding-top: (420/1440) * 100%
 
