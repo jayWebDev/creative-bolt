@@ -7,11 +7,7 @@
  */
 
 .deco-bg-lines
-  &--top--wedding-primary
-  &--top--wedding-secondary
-  &--bottom--wedding-primary
-  &--bottom--wedding-secondary
-    position: relative
+  position: relative
 
   &--top--wedding-primary
   &--top--wedding-secondary
@@ -39,29 +35,13 @@
       background-repeat: no-repeat
       z-index: -1
 
-/*
- * Background Line Pattern Decorations - Images - Wedding Project
- */
+  &--top--wedding-primary::before
+  &--bottom--wedding-primary::after
+    background-image: url(../images/project-images/wedding/faded_lines-wedding-purple@2x.png)
 
-  &--top--wedding-primary
-    &::before
-      background-image: url(../images/project-images/wedding/faded_lines-wedding-purple@2x.png)
-
-  &--bottom--wedding-primary
-    &::after
-      background-image: url(../images/project-images/wedding/faded_lines-wedding-purple@2x.png)
-
-  &--top--wedding-secondary
-    &::before
-      background-image: url(../images/project-images/wedding/faded_lines-wedding-blue@2x.png)
-
-  &--bottom--wedding-secondary
-    &::after
-      background-image: url(../images/project-images/wedding/faded_lines-wedding-blue@2x.png)
-
-/*
- * Background Line Pattern Decorations - Positioning - Wedding Project
- */
+  &--top--wedding-secondary::before,
+  &--bottom--wedding-secondary::after
+    background-image: url(../images/project-images/wedding/faded_lines-wedding-blue@2x.png)
 
   &--wedding-1
     &::before,
@@ -158,10 +138,6 @@
     width: 100%
     z-index: 0
 
-/*
- * Background Color Block Decorations - Colors - Wedding Project
- */
-
   &--wedding-primary
     &::after
       background-color: wedding-primary-color
@@ -169,10 +145,6 @@
   &--wedding-primary-lighter
     &::after
       background-color: wedding-primary-lighter
-
-/*
- * Background Color Block Decorations - Size and Positioning - Wedding Project
- */
 
   &--wedding-website-1
     &::after
