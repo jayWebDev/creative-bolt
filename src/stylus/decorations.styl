@@ -9,6 +9,8 @@
 .deco-bg-lines
   position: relative
 
+  &--top--site-primary
+  &--top--site-secondary
   &--top--wedding-primary
   &--top--wedding-secondary
     &::before
@@ -22,6 +24,8 @@
       background-repeat: no-repeat
       z-index: -1
 
+  &--bottom--site-primary
+  &--bottom--site-secondary
   &--bottom--wedding-primary
   &--bottom--wedding-secondary
     &::after
@@ -34,6 +38,14 @@
       background-size: contain
       background-repeat: no-repeat
       z-index: -1
+
+  &--top--site-primary::before
+  &--bottom--site-primary::after
+    background-image: url(../images/faded_lines-site-primary@2x.jpg)
+
+  &--top--site-secondary::before,
+  &--bottom--site-secondary::after
+    background-image: url(../images/faded_lines-site-secondary@2x.jpg)
 
   &--top--wedding-primary::before
   &--bottom--wedding-primary::after

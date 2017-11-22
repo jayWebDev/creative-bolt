@@ -1550,6 +1550,8 @@ ul {
 .deco-bg-lines {
   position: relative;
 }
+.deco-bg-lines--top--site-primary::before,
+.deco-bg-lines--top--site-secondary::before,
 .deco-bg-lines--top--wedding-primary::before,
 .deco-bg-lines--top--wedding-secondary::before {
   content: '';
@@ -1562,6 +1564,8 @@ ul {
   background-repeat: no-repeat;
   z-index: -1;
 }
+.deco-bg-lines--bottom--site-primary::after,
+.deco-bg-lines--bottom--site-secondary::after,
 .deco-bg-lines--bottom--wedding-primary::after,
 .deco-bg-lines--bottom--wedding-secondary::after {
   content: '';
@@ -1573,6 +1577,14 @@ ul {
   background-size: contain;
   background-repeat: no-repeat;
   z-index: -1;
+}
+.deco-bg-lines--top--site-primary::before,
+.deco-bg-lines--bottom--site-primary::after {
+  background-image: url("../images/faded_lines-site-primary@2x.jpg");
+}
+.deco-bg-lines--top--site-secondary::before,
+.deco-bg-lines--bottom--site-secondary::after {
+  background-image: url("../images/faded_lines-site-secondary@2x.jpg");
 }
 .deco-bg-lines--top--wedding-primary::before,
 .deco-bg-lines--bottom--wedding-primary::after {
