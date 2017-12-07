@@ -5,11 +5,15 @@
 
     .footer__icon
       border-bottom-color: secondary-color
-      fill: secondary-color
 
       &:hover
         border-bottom-color: white
-        fill: white
+
+        .icon--social
+          fill: white
+
+    .icon--social
+      fill: secondary-color
 
   &--wedding
     background-color: wedding-primary-color
@@ -23,7 +27,11 @@
   text-align: center
 
 .footer__link
-  padding-top: 40px
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
 
 .footer__icon,
 .footer__logo
@@ -31,22 +39,27 @@
   width: 100%
 
 .footer__icon
+  position: relative
   max-width: 30px
+  max-height: 30px
   margin: 0 20px 50px
-  padding-bottom: 20px
-  border-bottom-width: 10px
+  padding-bottom: 50px
+  border-bottom-width: 5px
   border-bottom-style: solid
   border-bottom: 10px solid
 
   +mq-min(400px)
     max-width: 50px
+    max-height: 50px
+    padding-bottom: 80px
+    border-bottom-width: 10px
 
   +mq-min(600px)
-    max-width: 50px
     margin: 0 30px 50px
 
 .footer__logo
   max-width: 50px
+  max-height: 50px
   fill: white
 
 .footer__text

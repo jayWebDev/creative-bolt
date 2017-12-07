@@ -1,6 +1,9 @@
 var gulp = require('gulp');
+var sourcemaps = require('gulp-sourcemaps');
 var stylus = require('gulp-stylus');
 var pug = require('gulp-pug');
+var autoprefixer = require('gulp-autoprefixer');
+var cssmin = require('gulp-cssmin');
 var browserSync = require('browser-sync').create();
 var runSequence = require('run-sequence');
 var cp = require('child_process');
@@ -35,7 +38,14 @@ gulp.task('views', function() {
 
 gulp.task('styles', function() {
   return gulp.src('src/stylus/main.styl')
-    .pipe(stylus())
+    .pipe(sourcemaps.init())
+    .pipe(stylus({
+      compress: true
+    }))
+    .pipe(autoprefixer({
+			browsers: ['last 2 versions'] // Call in autoprefixer (latest 2 version) on our compiled css file
+		}))
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('assets/css'))
     .pipe(browserSync.reload({
       stream: true

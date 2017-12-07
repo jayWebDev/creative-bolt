@@ -6,7 +6,10 @@
   z-index: -1
 
 .hero--home
-  background: url(../images/faded_lines-01@2x.jpg) center -385px / 960px no-repeat
+  background: url(../images/faded_lines-01@2x.jpg) 17% -385px / 960px no-repeat
+
+  +mq-min(750px)
+    background: url(../images/faded_lines-01@2x.jpg) center -385px / 960px no-repeat
 
 .hero__content
   max-width: 960px
