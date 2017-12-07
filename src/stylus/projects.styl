@@ -34,13 +34,12 @@
   padding: 70px 0
 
 .project__container
-  margin-bottom: 50px
-  padding: 0 30px 50px 30px
-  border-bottom: 1px solid secondary-color
+  margin-bottom: 100px
+  padding: 0
 
   +mq-min(960px)
-    padding: 0 15px 0 15px
     border-bottom: none
+    margin-bottom: 150px
 
   &:last-of-type
     border-bottom: none
@@ -48,12 +47,14 @@
 
 .project__title
   position: relative
-  width: 100%
+  width: 80%
+  max-width: 960px
   margin: 0 auto 30px auto
   padding-bottom: 25px
   line-height: 1.1
 
   +mq-min(960px)
+    width: 100%
     margin: 0 auto 65px auto
 
   &::after
@@ -68,44 +69,67 @@
 
 .project__hero
   display: block
-  width: 100%
+  width: 90%
   max-width: 960px
-  margin: 0 auto 30px auto
-  border: 1px solid secondary-color
+  margin: 0 10px
+  border-radius: border-radius
+  box-shadow: project-shadow
 
-  +mq-min(960px)
-    margin: 0 auto 50px auto
+  +mq-min(800px)
+    width: 100%
 
 .project__info
   display: flex
-  flex-direction: row
+  flex-direction: column
   justify-content: space-between
   align-items: flex-start
   flex-wrap: wrap
+  max-width: 960px
+  margin: 0 auto
 
-  +mq-min(960px)
-    margin: 0 65px 0 15px
+  +mq-min(800px)
+    flex-direction: row
 
 .project__description
   order: 1
-  width: 100%
-  margin-bottom: 25px
+  flex: 1
+  width: 80%
+  margin: 0 auto
 
-  +mq-min(960px)
-    width: (530/960) * 100%
+  +mq-min(800px)
+    padding-left: 25px
+    margin: 0 25px 0 0
+    border-left: 1px solid secondary-color
 
 .project__categories
-  flex: none
+  flex: 1
   order: 2
-  width: 130px
+  width: 100%
   font-size: emify(12px)
   font-weight: 700
   color: secondary-color
   text-transform: uppercase
 
-  +mq-min(960px)
+  +mq-min(800px)
+    flex: none
+    order: 0
+    width: 200px
+
+.list--project-categories
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-around
+  width: 80%
+  margin: 0 auto
+  padding: 2em 0
+  border-bottom: 1px solid secondary-color
+
+  +mq-min(800px)
+    flex-direction: column
     order: 1
-    text-align: right
+    padding: 0
+    border-bottom: none
 
 .project__button
   position: relative
@@ -133,3 +157,42 @@
 
   &:hover::before
     height: 100%
+
+
+
+
+
+//*------------------------------------*\\
+//  #FLICKITY-CAROUSEL-STYLES
+//*------------------------------------*\\
+
+.carousel
+  position: relative
+  max-height: 400px
+  margin-bottom: 65px
+  padding-top: (400/960) * 100%
+
+  +mq-min(960px)
+    padding-top: 0
+    height: 400px
+
+.carousel .flickity-viewport
+  position: absolute
+  width: 100%
+  top: 0
+  overflow: visible
+
+.carousel-cell
+  opacity: .3
+  transform: scale(.9)
+  transition: opacity 800ms ease-in-out, transform 800ms cubic-bezier(0.175, 0.885, 0.32, 1.275)
+
+.carousel-cell.is-selected
+  opacity: 1
+  transform: scale(1)
+
+.carousel .flickity-page-dots
+  bottom: -45px
+
+.carousel .flickity-page-dots .dot
+  background-color: secondary-color

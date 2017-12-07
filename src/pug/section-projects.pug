@@ -1,46 +1,97 @@
-section.section--projects
-  .section-container
+section#projects.section--projects
+  .section-container--full-width
     .projects__content
       
       .section-headline-wrapper.headline--center
-        h2.section-headline.bg-color--secondary.lg-btm-mg Projects
+        h2.section-headline.bg-color--main-lighter.lg-btm-mg Projects
         
+      section.project__container
+        h3.project__title.text--main Roster Financial Website
+        
+        div#project-1.carousel
+          img.project__hero.carousel-cell(src='assets/images/roster-portfolio-img@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/roster_web-carousel/roster_financial-1@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/roster_web-carousel/roster_financial-2@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/roster_web-carousel/roster_financial-3@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/roster_web-carousel/roster_financial-4@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/roster_web-carousel/roster_financial-5@2x.jpg')
+        
+        .project__info
+          .project__categories
+            ul.list--project-categories
+              li.item--project-category UI/UX Design
+              li.item--project-category Web Developement
+              li.item--project-category HTML/CSS        
+              li.item--project-category Javascript/JQuery        
+
+          .project__description Roster wanted to rebuild their website to modernize it and align it with their updated logo and branding. I started with Photoshop mockups to design the UI/UX. Then I moved into HTML, CSS, and JQuery to build the front-end. This approach allowed me to create a modern, responsive website which was aligned with Roster's new branding.
+      
       section.project__container
         h3.project__title.text--main The Wedding of Kelly &amp; Jay
-        img.project__hero(src='assets/images/wedding-portfolio-img@2x.jpg')
+          
+        div#project-2.carousel
+          img.project__hero.carousel-cell(src='assets/images/wedding-portfolio-img@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/wedding-carousel/wedding_website-1@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/wedding-carousel/wedding_website-2@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/wedding-carousel/wedding_website-3@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/wedding-carousel/wedding_website-4@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/wedding-carousel/wedding_website-5@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/wedding-carousel/wedding_website-6@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/wedding-carousel/wedding_website-7@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/wedding-carousel/wedding_website-8@2x.jpg')
         
         .project__info
           .project__categories
             ul.list--project-categories
               li.item--project-category UI/UX Design
-              li.item--project-category Web Development
-              li.item--project-category Print Design
+              li.item--project-category Web Developement
+              li.item--project-category Web Animation
+              li.item--project-category HTML/CSS        
+              li.item--project-category Javascript
+              li.item--project-category AJAX
+              li.item--project-category PHP/MySQL       
 
-          .project__description Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla.
-          a(href="/project/kelly-and-jay-wedding/").project__button.button.bg-color--main.text--white View Project
+          .project__description This is the website for my own personal wedding. We needed 2 sites for the wedding. One for guests to visit for general information on the wedding. The other was the RSVP which the guests were directed to on the mailed invite. I wanted both site to be fun and reflect the color palette and look of the wedding. I added little animations and some hidden surprises to ensure a fun experience on the site. To build the informational site with HTML, CSS, and vanilla Javascript. For the RSVP site I also used PHP, MySQL, and some AJAX to make sure RSVPing was a quick and easy process.
 
       section.project__container
-        h3.project__title.text--main Roster Financial Marketing Website
-        img.project__hero(src='assets/images/roster-portfolio-img@2x.jpg')
+        h3.project__title.text--main 16 Weeks to Greatness Website
+          
+        div#project-3.carousel
+          img.project__hero.carousel-cell(src='assets/images/project-images/16_weeks-carousel/16_weeks-hero@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/16_weeks-carousel/16_weeks-1@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/16_weeks-carousel/16_weeks-2@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/16_weeks-carousel/16_weeks-3@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/16_weeks-carousel/16_weeks-4@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/16_weeks-carousel/16_weeks-5@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/16_weeks-carousel/16_weeks-6@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/16_weeks-carousel/16_weeks-7@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/16_weeks-carousel/16_weeks-8@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/16_weeks-carousel/16_weeks-9@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/16_weeks-carousel/16_weeks-10@2x.jpg')
+
+        .project__info
+          .project__categories
+            ul.list--project-categories
+              li.item--project-category UI/UX Design
+              li.item--project-category HTML/CSS        
+              li.item--project-category Javascript/JQuery
+              li.item--project-category PHP       
+
+          .project__description Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla.
+
+      section.project__container
+        h3.project__title.text--main GamePlan Income Allocation Calculator
+        
+        div#project-4.carousel
+          img.project__hero.carousel-cell(src='assets/images/project-images/income_allocation-carousel/income_allocation-hero@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/income_allocation-carousel/income_allocation-1@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/income_allocation-carousel/income_allocation-2@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/income_allocation-carousel/income_allocation-3@2x.jpg')
+          img.project__hero.carousel-cell(src='assets/images/project-images/income_allocation-carousel/income_allocation-4@2x.jpg')
         
         .project__info
           .project__categories
             ul.list--project-categories
               li.item--project-category UI/UX Design
-              li.item--project-category Web Development
 
           .project__description Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla.
-          a(href="#").project__button.button.bg-color--main.text--white View Project
-
-      section.project__container
-        h3.project__title.text--main The Propulsion Program
-        img.project__hero(src='assets/images/propulsion-portfolio-img@2x.jpg')
-        
-        .project__info
-          .project__categories
-            ul.list--project-categories
-              li.item--project-category Brand Development
-              li.item--project-category Print Design
-
-          .project__description Maecenas faucibus mollis interdum. Maecenas faucibus mollis interdum. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec ullamcorper nulla non metus auctor fringilla.
-          a(href="#").project__button.button.bg-color--main.text--white View Project

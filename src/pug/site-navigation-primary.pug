@@ -1,4 +1,4 @@
-- var sections = ['About Me','Knowledge','Projects','Resume','Contact'];
+- var sections = ['About Me','Knowledge','Projects','Contact'];
 
 nav.main-nav.main-nav--primary
   .main-nav__container
@@ -6,6 +6,11 @@ nav.main-nav.main-nav--primary
       include ../../assets/images/js-logo-hero.min.svg
 
     ul.main-nav__list
-      each section in sections
-        li.main-nav__item
-          a= section
+        li.main-nav__item 
+          a.main-nav__link(href='#about-me') About Me
+        li.main-nav__item 
+          a.main-nav__link(href='#knowledge') Knowledge
+        li.main-nav__item 
+          a.main-nav__link(href='#projects') Projects
+        li.main-nav__item 
+          a.main-nav__link(href='#contact') Contact

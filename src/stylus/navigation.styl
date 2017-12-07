@@ -16,8 +16,21 @@
         background-color: secondary-color
 
     .main-nav__item
+      transition: color 400ms ease-in
+      &:hover
+        color: white
+
       &:last-of-type
         color: secondary-color
+
+        &:hover
+          color: white
+
+      &::after
+        background-color: secondary-darker
+    .main-nav__link
+      color: inherit
+      text-decoration: none
 
   &--wedding
     .main-nav__logo-wrapper
@@ -45,7 +58,7 @@
   position: relative
   top: 15px
   width: 25.87px
-  margin: 5px 50px 0 15px
+  margin: 15px 50px 0 15px
 
 .main-nav__list
   display: flex
@@ -57,9 +70,25 @@
     content: ''
     position: absolute
     top: -15px
-    left: -10px
+    left: 0
     right: -20px
     height: 1px
 
 .main-nav__item
+  position: relative
+  padding: 5px 10px 5px
   text-align: right
+
+  &::after
+    content: ''
+    position: absolute
+    display: block
+    width: 120%
+    height: 100%
+    top: 0
+    transform: translateX(91%)
+    transition: all 500ms ease-in-out
+    z-index: -1
+
+  &:hover::after
+    transform: translateX(-10%)

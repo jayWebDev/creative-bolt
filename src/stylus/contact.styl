@@ -1,42 +1,28 @@
 .section--contact
   position: relative
   overflow: hidden
-
-  &:before,
-  &:after
-    content: ''
-    display: block
-    position: absolute
-    width: 250%
-    max-width: 960px
-    height: 960px
-    background: url(../images/faded_lines-01@2x.jpg) center / 100% no-repeat
-    z-index: -1
-
-    +mq-min(450px)
-      width: 100%
-
-  &:before
-    top: -350px
-    left: -270px
-    transform: rotate(-110deg)
-
-    +mq-min(450px)
-      top: -340px
-
-  &:after
-    top: 590px
-    right: -110px
-    transform: rotate(-77deg)
-
-    +mq-min(450px)
-      top: 690px
+  border-top: 1px solid #BDBFC2
 
 .contact__content
-  padding: 70px 30px
+  padding: 50px 0
 
-  +mq-min(960px)
-    padding: 100px 175px
+  +mq-min(820px)
+    padding: 150px 0
+
+.contact-email
+  margin: 0 auto
+  padding: 0
+  text-align: center
+  font-size: emify(20)
+
+  +mq-min(400px)
+    font-size: emify(30)
+
+  +mq-min(620px)
+    font-size: emify(48)
+
+  +mq-min(820px)
+    font-size: emify(64)
 
 .form__input-wrapper
   position: relative

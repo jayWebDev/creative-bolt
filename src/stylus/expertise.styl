@@ -2,7 +2,6 @@
   position: relative
   overflow: hidden
 
-  &:before,
   &:after
     content: ''
     display: block
@@ -13,33 +12,25 @@
     background: url(../images/faded_lines-02@2x.jpg) center / 100% no-repeat
     z-index: -1
 
-    +mq-min(450px)
+    +mq-min(600px)
       width: 100%
-
-  &:before
-    top: -400px
-
-    +mq-min(450px)
-      top: -300px
-      right: -400px
-      transform: rotate(-90deg)
 
   &:after
     bottom: -400px
 
-    +mq-min(450px)
+    +mq-min(600px)
       bottom: -400px
       left: -400px
       transform: rotate(98deg)
 
 .expertise__section
   position: relative
-  padding: 40px 20px
+  padding: 50px 20px
   border-bottom: 1px solid secondary-color
 
-  +mq-min(450px)
+  +mq-min(600px)
     margin: 0 80px
-    padding: 67px 0
+    padding: 100px 0
 
   &:nth-child(2n) .expertise__text,
   &:nth-child(2n-1) .expertise__graphic
@@ -48,26 +39,34 @@
 
   &:nth-child(2n) .expertise__graphic,
   &:nth-child(2n-1) .expertise__text
-    +mq-min(450px)
+    +mq-min(600px)
       float: right
 
   clearfix()
 
-.expertise__text,
 .expertise__graphic
-  +mq-min(450px)
-    width: (370/800) * 100%
+  width: 100%
 
-.expertise__graphic
-  +mq-min(450px)
-    float: right
+  +mq-min(600px)
+    width: 40%
+
+  +mq-min(800px)
+    width: (370/960) * 100%
 
 .expertise__text
-  +mq-min(450px)
-    float: left
+  width: 100%
+
+  +mq-min(600px)
+    width: 50%
+
+  +mq-min(800px)
+    width: (530/960) * 100%
 
 .expertise-graphic
-  width: 100%
+  width: 80%
+
+  +mq-min(800px)
+    width: 100%
 
 .expertise__title
   color: main-color
@@ -78,3 +77,8 @@
     width: emify(80, 24)
     margin: 30px 0
     border-bottom: 10px solid secondary-color
+
+.expertise__description
+  +mq-min(800px)
+    font-size: 1.1em
+    line-height: 1.5
