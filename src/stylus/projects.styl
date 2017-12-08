@@ -10,7 +10,7 @@
     width: 200%
     max-width: 960px
     height: 960px
-    background: url(../images/faded_lines-01@2x.jpg) center / 100% no-repeat
+    background: url(../images/faded_lines-01@2x.png) center / 100% no-repeat
     z-index: -1
 
     +mq-min(960px)
@@ -67,8 +67,10 @@
     height: 10px
     background-color: secondary-color
 
-.project__hero
+.project__hero,
+.project__figure
   display: block
+  position: relative
   width: 90%
   max-width: 960px
   margin: 0 10px
@@ -77,6 +79,29 @@
 
   +mq-min(800px)
     width: 100%
+
+.project__image
+  max-width: 100%
+
+.project__figcaption
+  display: inline-block
+  position: absolute
+  bottom: 7px
+  left: 10px
+  margin: 0
+  padding: 3px 6px
+  background-color: rgba(255, 255, 255, .6)
+  border-radius: 5px
+  font-size: emify(14px)
+  text-transform: uppercase
+
+  &.dark-bg
+    background-color: rgba(255, 255, 255, .3)
+    color: #444
+
+  &.dark-bg
+    background-color: rgba(0, 0, 0, .3)
+    color: white
 
 .project__info
   display: flex
