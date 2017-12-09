@@ -48,7 +48,7 @@
 .project__title
   position: relative
   width: 80%
-  max-width: 960px
+  max-width: 950px
   margin: 0 auto 30px auto
   padding-bottom: 25px
   line-height: 1.1
@@ -72,13 +72,17 @@
   display: block
   position: relative
   width: 90%
-  max-width: 960px
+  max-width: 950px
   margin: 0 10px
   border-radius: border-radius
   box-shadow: project-shadow
+  text-align: center
 
   +mq-min(800px)
     width: 100%
+
+.project__figure
+  background: url(../images/project_placeholder@2x.png)
 
 .project__image
   max-width: 100%
@@ -87,20 +91,27 @@
   display: inline-block
   position: absolute
   bottom: 7px
-  left: 10px
+  left: 50%
   margin: 0
-  padding: 3px 6px
+  padding: 2px 5px
   background-color: rgba(255, 255, 255, .6)
   border-radius: 5px
-  font-size: emify(14px)
+  transform: translateX(-50%)
+  font-size: emify(12px)
   text-transform: uppercase
 
-  &.dark-bg
-    background-color: rgba(255, 255, 255, .3)
+  +mq-min(600px)
+    left: 10px
+    padding: 3px 6px
+    transform: translateX(0)
+    font-size: 14px
+
+  &.light-bg
+    background-color: rgba(255, 255, 255, .4)
     color: #444
 
   &.dark-bg
-    background-color: rgba(0, 0, 0, .3)
+    background-color: rgba(0, 0, 0, .2)
     color: white
 
 .project__info
@@ -109,7 +120,7 @@
   justify-content: space-between
   align-items: flex-start
   flex-wrap: wrap
-  max-width: 960px
+  max-width: 950px
   margin: 0 auto
 
   +mq-min(800px)
@@ -125,6 +136,9 @@
     padding-left: 25px
     margin: 0 25px 0 0
     border-left: 1px solid secondary-color
+
+.project__txt-link
+  color: secondary-color
 
 .project__categories
   flex: 1
@@ -221,3 +235,11 @@
 
 .carousel .flickity-page-dots .dot
   background-color: secondary-color
+
+.carousel .flickity-prev-next-button
+  transform: scale(1)
+  transition: opacity 800ms ease-in, transform 700ms cubic-bezier(0.175, 0.885, 0.32, 1.275)
+
+.carousel .flickity-prev-next-button:disabled
+  opacity: 0
+  transform: scale(0)

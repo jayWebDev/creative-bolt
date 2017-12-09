@@ -54,6 +54,7 @@
   justify-content: start
   align-items: start
   max-width: 100%
+  animation: navSlideDown 1s 2s ease-in-out backwards;  
 
 .main-nav__logo-wrapper
   position: relative
@@ -100,3 +101,13 @@
 
   &:hover::after
     transform: translateX(-10%)
+
+@keyframes navSlideDown {
+  0% {
+    transform: translateY(-100%)
+  }
+  100% {
+    transform: translateY(0%)
+  }
+
+}

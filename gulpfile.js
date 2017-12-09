@@ -67,4 +67,5 @@ gulp.task('views-seq', function(cb) {
 gulp.task('watch', ['browser-sync', 'styles', 'views'], function() {
   gulp.watch('src/pug/*.pug', ['views-seq']);
   gulp.watch('src/stylus/*.styl', ['styles-seq']);
+  gulp.watch('assets/scripts/*.js', ['styles-seq','views-seq']);
 });

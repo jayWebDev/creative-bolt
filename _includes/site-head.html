@@ -7,8 +7,13 @@
     gtag('js', new Date());
 
     gtag('config', 'UA-110853619-1');
-  </script>
 
+    function preloadImg(imgSrc) {
+      var my_image = new Image();
+      my_image.src = imgSrc;
+    }
+    preloadImg('/assets/images/logo_fill-halftone_lines-gold.png');
+  </script>
 
   <title>{{ site.title }}</title>
   <meta name="Description" content="This is the portfolio of Jason Shoreman. Desiger. Developer. Creator. UI/UX, Webiste Development, Brand Development, Print Design.">
